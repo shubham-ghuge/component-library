@@ -1,0 +1,5 @@
+// This file contains styled components 
+@use './colors' ;
+.primary-btn{
+    background-color: colors.$blue;
+}

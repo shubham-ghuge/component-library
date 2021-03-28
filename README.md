@@ -1,10 +1,15 @@
 # component-library
-
+- color palette
+- typography
 - Avatar
 - Alert
 - Badge
     - Badge on Icons
     - Badge on Avatars
+- custom icons
+    - menu
+    - loader
+    - close
 - Button
     - Primary
     - Link

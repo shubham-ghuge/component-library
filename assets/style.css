@@ -1,6 +1,18 @@
-@use './components';
-@use './variables';
-@use './layouts';
-@use './mixins';
-@use './utilities';
+/* browser css styling reset */
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-btn {
+  background-color: #3c83f6;
+}
 /*# sourceMappingURL=style.css.map */

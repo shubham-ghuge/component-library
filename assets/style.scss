@@ -1,5 +1,18 @@
-@use './components';
-@use './variables';
-@use './layouts';
-@use './mixins';
-@use './utilities';
+// main css file
+
+@import "./colors";
+/* browser css styling reset */
+button {
+  cursor: pointer;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+.primary-btn {
+  background-color: $blue;
+}
