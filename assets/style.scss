@@ -1,7 +1,13 @@
 // main css file
+// import all here
+@use './type-scale' as *;
+@use './utilities' as *;
+@use './components' as *;
 
-@import "./colors";
 /* browser css styling reset */
+body{
+  font-family: 'Inter',sans-serif;
+}
 button {
   cursor: pointer;
 }
@@ -11,9 +17,4 @@ body {
 }
 a {
   text-decoration: none;
-}
-
-.primary-btn {
-  background-color: $blue;
-  color: #000;
 }

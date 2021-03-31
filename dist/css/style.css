@@ -1,4 +1,250 @@
+.fsz-5 {
+  font-size: 3.052rem;
+}
+
+.fsz-4 {
+  font-size: 2.441rem;
+}
+
+.fsz-3 {
+  font-size: 1.953rem;
+}
+
+.fsz-2 {
+  font-size: 1.563rem;
+}
+
+.fsz-1 {
+  font-size: 1.25rem;
+}
+
+.small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* utility class */
+.br-0 {
+  border-radius: 0rem;
+}
+
+.br-1 {
+  border-radius: 0.25rem;
+}
+
+.br-2 {
+  border-radius: 0.5rem;
+}
+
+.br-3 {
+  border-radius: 0.75rem;
+}
+
+.br-4 {
+  border-radius: 1rem;
+}
+
+.br-5 {
+  border-radius: 1.25rem;
+}
+
+.br-6 {
+  border-radius: 1.5rem;
+}
+
+.br-7 {
+  border-radius: 1.75rem;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.m-0 {
+  margin: 0rem;
+}
+
+.p-0 {
+  margin: 0rem;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.p-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.p-2 {
+  margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 0.75rem;
+}
+
+.p-3 {
+  margin: 0.75rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.p-4 {
+  margin: 1rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.p-5 {
+  margin: 1.25rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.m-auto-0 {
+  margin: auto 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+/* utility class ends */
+/* components start */
+/* - Avatar */
+/* small icon avatar */
+.avatar-sm-i-basic {
+  background-color: #333333;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.avatar-sm-i-basic i {
+  font-size: 1.563rem;
+  vertical-align: middle;
+}
+
+.avatar-sm-i-primary {
+  background-color: #113733;
+  box-sizing: border-box;
+  color: #17eed4;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.avatar-sm-i-primary i {
+  font-size: 1.563rem;
+  vertical-align: middle;
+}
+
+.avatar-sm-i-success {
+  background-color: #34380f;
+  box-sizing: border-box;
+  color: #e1e802;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.avatar-sm-i-success i {
+  font-size: 1.563rem;
+  vertical-align: middle;
+}
+
+/* large icon avatar */
+.avatar-lg-i-basic {
+  background-color: #333333;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.avatar-lg-i-basic i {
+  font-size: 1.953rem;
+  vertical-align: middle;
+}
+
+.avatar-lg-i-primary {
+  background-color: #113733;
+  color: #17eed4;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.avatar-lg-i-primary i {
+  font-size: 1.953rem;
+  vertical-align: middle;
+}
+
+.avatar-lg-i-success {
+  background-color: #34380f;
+  color: #e1e802;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.avatar-lg-i-success i {
+  font-size: 1.953rem;
+  vertical-align: middle;
+}
+
+/* small avatar image */
+.avatar-sm {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar-sm img {
+  height: 100%;
+  width: 100%;
+  object-position: top center;
+  object-fit: cover;
+}
+
+/* large avatar image */
+.avatar-lg {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar-lg img {
+  height: 100%;
+  width: 100%;
+  object-position: top center;
+  object-fit: cover;
+}
+
+/* components ends */
 /* browser css styling reset */
+body {
+  font-family: "Inter", sans-serif;
+}
+
 button {
   cursor: pointer;
 }
@@ -10,11 +256,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.primary-btn {
-  background-color: #3c83f6;
-  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

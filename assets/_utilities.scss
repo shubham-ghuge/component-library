@@ -2,3 +2,51 @@
 
 // text colors .text-white .text-black .text-primary
 // based on emmet
+
+@use './variables' as *;
+
+// spacing classes
+/* utility class */
+
+@for $i from 0 through 7 {
+  // border class
+  .br-#{$i} {
+    border-radius: $border-radius-size * $i;
+  }
+}
+.circle {
+  border-radius: 50%;
+}
+
+@for $i from 0 through 5 {
+  // margin class
+  .m-#{$i} {
+    margin: $spacer * $i;
+  }
+  // padding class
+  .p-#{$i} {
+    margin: $spacer * $i;
+  }
+}
+.m-auto {
+  margin: auto;
+}
+.m-0-auto {
+  margin: 0 auto;
+}
+.m-auto-0 {
+  margin: auto 0;
+}
+// display classes
+
+@mixin d-class($val) {
+  .d-#{$val} {
+    display: $val;
+  }
+}
+
+@include d-class(flex);
+@include d-class(block);
+@include d-class(none);
+
+/* utility class ends */

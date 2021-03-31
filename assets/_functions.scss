@@ -1,0 +1,20 @@
+@use './variables' as *;
+@use './type-scale' as *;
+@use './colors' as *;
+@use "sass:map";
+
+@function get-p($size) {
+  @return $spacer * $size;
+}
+@function get-br($size) {
+  @return $border-radius-size * $size;
+}
+@function get-fs($size) {
+  @return map-get($font-sizes, $size);
+}
+@function get-icon-bgc($bgc) {
+  @return map.get($icon-colors, $bgc, "bgc");
+}
+@function get-icon-c($c) {
+  @return map.get($icon-colors, $c, "c");
+}

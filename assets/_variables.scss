@@ -1,9 +1,8 @@
 // all variables related to the component library
-$z-10: 10;
-$z-20: 20;
-$z-40: 40;
-$z-80: 80;
-$z-160: 160;
-$z-320: 320;
-$z-640: 640;
-$m-05: 0.5rem;
+// ini => initial
+// initial z index size
+$ini-z-index: 10;
+// fixed initial value for spacing
+$spacer: 0.25rem;
+// initial border value
+$border-radius-size: 0.25rem;

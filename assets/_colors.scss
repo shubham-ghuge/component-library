@@ -1,15 +1,45 @@
 // This file contains color palette of the components (customize it here)
-
-$light-blue:hsl(213, 94%, 68%);
-$dark-blue:hsl(221, 83%, 53%);
-$blue:hsl(217, 91%, 60%);
-$light-green:hsl(158, 64%, 52%);
-$dark-green:hsl(163, 88%, 20%);
-$green:hsl(160, 84%, 39%);
-$light-red:hsl(0, 91%, 71%);
-$dark-red:hsl(0, 74%, 42%);
-$red:hsl(0, 72%, 51%);
-$light-yellow:hsl(43, 96%, 56%);
-$dark-yellow:hsl(32, 95%, 44%);
-$yellow:#F59E0B;
 // hover:dark focus:lights
+// 100:light,200:main.300:dark
+
+$colors: (
+  primary: (
+    100: hsla(195, 54%, 78%, 1),
+    200: hsl(212, 84%, 61%),
+    300: hsl(205, 98%, 20%),
+  ),
+  secondary: (
+    100: hsl(0, 0%, 100%),
+    200: hsl(218, 19%, 38%),
+    300: hsl(229, 19%, 22%),
+  ),
+  success: (
+    100: hsl(83, 88%, 52%),
+    200: hsl(101, 100%, 35%),
+    300: hsl(120, 100%, 20%),
+  ),
+  danger: (
+    100: hsl(357, 71%, 88%),
+    200: hsl(359, 72%, 47%),
+    300: hsl(359, 72%, 35%),
+  ),
+);
+
+$icon-colors: (
+  yello: (
+    "c": hsl(62, 98%, 46%),
+    "bgc": hsl(67, 58%, 14%),
+  ),
+  blue: (
+    "c": hsl(173, 86%, 51%),
+    "bgc": hsl(175, 53%, 14%),
+  ),
+  grey: (
+    "c": hsl(0, 0%, 15%),
+    "bgc": hsl(0, 0%, 20%),
+  ),
+  purple: (
+    "c": #ff00d6,
+    "bgc": #32032b,
+  ),
+);
