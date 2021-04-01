@@ -1,0 +1,77 @@
+@use './colors' as *;
+@use './variables' as *;
+
+:root {
+  // font custom props
+  @each $fs, $val in $font-sizes {
+    --#{$fs}: #{$val};
+  }
+  // output => --fsz-1 : 1.25rem;
+
+  //  creating custom props border sizes
+  /* border sizes */
+  @function get-br($size) {
+    @return $border-radius-size * $size;
+  }
+  @for $i from 0 through 7 {
+    --br-#{$i}: #{get-br($i)};
+  }
+  /* spacing size */
+  // creating space custom props
+  @function get-p($size) {
+    @return $spacer * $size;
+  }
+  @for $i from 0 through 7 {
+    --p-#{$i}: #{get-p($i)};
+  }
+  //   color custom props
+  @each $type, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$type}-#{$shade}: #{$value};
+    }
+  }
+  //   icon color custom prop
+  @each $type, $shades in $icon-colors {
+    @each $shade, $value in $shades {
+      --icon-#{$type}-#{$shade}: #{$value};
+    }
+  }
+}
+// text and bgc utils
+@each $fs, $val in $font-sizes {
+  .#{$fs}{
+    font-size: var(--#{$fs});
+  }
+}
+
+@for $i from 0 through 7 {
+  .p-#{$i}{
+    padding: var(--p-#{$i});
+  }
+}
+
+@for $i from 0 through 7 {
+  .m-#{$i}{
+    margin: var(--p-#{$i});
+  }
+}
+
+@for $i from 0 through 7 {
+  .bdrs-#{$i}{
+    border-radius: var(--br-#{$i});
+  }
+}
+
+@each $type, $shades in $colors {
+  @each $shade, $value in $shades {
+    @if $shade==200 {
+      .c-#{$type}{
+        color:  var(--clr-#{$type}-#{$shade});
+      } 
+    }
+    .bgc-#{$type}{
+      background-color:  var(--clr-#{$type}-#{$shade});
+    }
+  }
+}
+
