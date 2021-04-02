@@ -9,6 +9,13 @@
   // output => --fsz-1 : 1.25rem;
 
   //  creating custom props border sizes
+  /* z-index */
+  @function get-z-index($size) {
+    @return $ini-z-index * $size;
+  }
+  @for $i from 0 through 7 {
+    --z-#{$i}: #{get-z-index($i)};
+  }
   /* border sizes */
   @function get-br($size) {
     @return $border-radius-size * $size;
@@ -27,7 +34,7 @@
   //   color custom props
   @each $type, $shades in $colors {
     @each $shade, $value in $shades {
-      --clr-#{$type}-#{$shade}: #{$value};
+      --c-#{$type}-#{$shade}: #{$value};
     }
   }
   //   icon color custom prop
@@ -41,6 +48,12 @@
 @each $fs, $val in $font-sizes {
   .#{$fs}{
     font-size: var(--#{$fs});
+  }
+}
+
+@for $i from 0 through 7 {
+  .z-#{$i}{
+    z-index: var(--z-#{$i});
   }
 }
 
@@ -66,11 +79,11 @@
   @each $shade, $value in $shades {
     @if $shade==200 {
       .c-#{$type}{
-        color:  var(--clr-#{$type}-#{$shade});
+        color:  var(--c-#{$type}-#{$shade})!important;
       } 
     }
-    .bgc-#{$type}{
-      background-color:  var(--clr-#{$type}-#{$shade});
+    .bgc-#{$type}-#{$shade}{
+      background-color:  var(--c-#{$type}-#{$shade})!important;
     }
   }
 }

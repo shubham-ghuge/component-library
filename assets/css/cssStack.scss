@@ -1,9 +1,11 @@
-@use './main';
+@use './main' as *;
 body {
   font-family: "Inter", sans-serif;
 }
 button {
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
+  transition: 0.2s all ease-in;
 }
 h1,
 h2,

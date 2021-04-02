@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cssStack</title>
-    <link rel="icon" href="./android-chrome-192x192.png">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png">
+    <link rel="icon" href="./android-chrome-192x192.png" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png" />
     <link rel="stylesheet" href="./dist/css/cssStack.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- inter -->
@@ -20,8 +20,10 @@
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
   </head>
-  <body class="m-5">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
+  <body>
+    <div
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
       <span class="avatar-sm-i-basic">
         <i class="bx bx-user"></i>
       </span>
@@ -41,23 +43,120 @@
         <i class="bx bx-user"></i>
       </span>
     </div>
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center">
       <span class="avatar-sm">
-        <img src="./assets/img/photo1.png" alt="user">
+        <img src="./assets/img/photo1.png" alt="user" />
       </span>
       <span class="avatar-lg">
-        <img src="./assets/img/photo2.png" alt="user">
+        <img src="./assets/img/photo2.png" alt="user" />
+      </span>
+      <span class="avatar-lg">
+        <div class="badge"></div>
+        <img src="./assets/img/photo2.png" alt="user" />
       </span>
     </div>
-    <div class="alert">
-      <span>
-        <i class='bx bxs-badge-check'></i>
-      </span>
-      <div class="alert-content">
-        <h3 style="font-weight: 500;">Lorem ipsum dolor sit.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere 
-        </p>
+    <div class="m-2">
+      <div class="alert-primary">
+        <span>
+          <i class="bx bxs-badge-check"></i>
+        </span>
+        <div class="alert-content">
+          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
+        </div>
+      </div>
+      <div class="alert-secondary">
+        <span>
+          <i class="bx bxs-badge-check"></i>
+        </span>
+        <div class="alert-content">
+          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
+        </div>
+      </div>
+      <div class="alert-danger">
+        <span>
+          <i class="bx bxs-badge-check"></i>
+        </span>
+        <div class="alert-content">
+          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
+        </div>
+      </div>
+      <div class="alert-success outline-primary">
+        <span>
+          <i class="bx bxs-badge-check"></i>
+        </span>
+        <div class="alert-content">
+          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
+        </div>
+        <span class="close">
+          <i class="bx bx-x"></i>
+        </span>
+      </div>
+      <div class="alert-base">
+        <span>
+          <i class="bx bxs-badge-check"></i>
+        </span>
+        <div class="alert-content">
+          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
+        </div>
       </div>
     </div>
+    <div class="d-flex m-2" style="align-items: center">
+      <span class="avatar-lg-i-secondary">
+        <div class="badge-primary"></div>
+        <i class="bx bx-user"></i>
+      </span>
+      <span class="avatar-lg-i-secondary">
+        <div class="badge-success"></div>
+        <i class="bx bx-user"></i>
+      </span>
+      <span class="avatar-lg-i-secondary">
+        <div class="badge-danger"></div>
+        <i class="bx bx-user"></i>
+      </span>
+      <span class="avatar-lg-i-secondary">
+        <div class="badge-secondary"></div>
+        <i class="bx bx-user"></i>
+      </span>
+      <div class="badge-rect-success">2</div>
+      <div class="badge-rect-primary">2</div>
+      <div class="badge-rect-secondary">2</div>
+      <div class="badge-rect-danger">2</div>
+    </div>
+    <!-- btns -->
+    <section>
+      <button class="btn-c-success">button</button>
+      <button class="btn-c-primary">button</button>
+      <button class="btn-c-secondary">button</button>
+      <button class="btn-c-base">Button</button>
+      <button class="btn-c-danger">button</button>
+      <button class="btn-success">button</button>
+      <button class="btn-primary">button</button>
+      <button class="btn-secondary">button</button>
+      <button class="btn-base">Button</button>
+      <button class="btn-danger">button</button>
+      <button class="btn-outline-success">button</button>
+      <button class="btn-outline-primary">button</button>
+      <button class="btn-outline-secondary">button</button>
+      <button class="btn-outline-base">Button</button>
+      <button class="btn-outline-danger">button</button>
+    
+      <button class="icon-btn-primary"><i class="bx bx-cart"></i></button>
+      <button class="icon-btn-secondary"><i class="bx bx-cart"></i></button>
+      <button class="icon-btn-base"><i class="bx bx-cart"></i></button>
+      <button class="icon-btn-abstract"><i class="bx bx-cart"></i></button>
+      <button class="btn-disabled">Button</button>
+
+      <button class="btn-success btn-addon  m-3">
+        <span><i class='bx bxs-download' ></i></span>
+        buy now
+      </button>
+    </section>
+    <!-- inputs -->
+
   </body>
 </html>

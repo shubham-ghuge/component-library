@@ -1,1 +1,25 @@
 @use '../abstracts' as *;
+
+.d-flex {
+  display: flex;
+}
+.logo {
+  height: 50px;
+}
+
+@for $i from 1 to 10 {
+  .h-#{$i}0{
+    height: #{$i}0vh;
+  }
+}
+@for $i from 1 to 10 {
+  .w-#{$i}0{
+    width: #{$i}0vw;
+  }
+}
+.close{
+  cursor: pointer;
+  position: absolute;
+  right: 0%;
+  top: 2%;
+}
