@@ -20,5 +20,9 @@ body {
   padding: 0;
 }
 a {
+  color: var(--c-link);
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

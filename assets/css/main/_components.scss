@@ -159,7 +159,7 @@
 }
 /* buttons without borders */
 @each $color-type, $shades in $colors {
-  .outline-#{$color-type}{
+  .outline-#{$color-type} {
     border: 2px solid var(--c-#{$color-type}-300);
   }
 }
@@ -172,7 +172,8 @@
     color: var(--c-#{$color-type}-300);
     border-radius: var(--br-1);
     padding: var(--p-3) var(--p-4);
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
       background-color: var(--c-#{$color-type}-100);
     }
@@ -234,12 +235,12 @@
   }
 }
 
-.btn-addon{
+.btn-addon {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: var(--p-2);
-  & i{
+  & i {
     font-size: var(--fsz-2);
     line-height: 1;
     margin: 0 var(--p-1) 0 0;
@@ -252,5 +253,58 @@
 .btn-c-secondary {
   &:hover {
     color: var(--c-base-300);
+  }
+}
+
+/* dialog box */
+.dialog {
+  border: 1px solid var(--c-base-200);
+  background-color: #fff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+  border-radius: var(--br-2);
+  color: var(--c-black);
+  display: flex;
+  flex-direction: column;
+  padding: var(--p-4);
+  max-width: 90vw;
+  @media all and (min-width: 600px) {
+    max-width: 40vw;
+  }
+  & > &-heading {
+    font-size: var(--fsz-2);
+    font-weight: 500;
+  }
+  & > &-details {
+    margin: var(--p-3) 0 0;
+  }
+  & > &-btns {
+    display: flex;
+    & button {
+      margin: var(--p-5) var(--p-2) 0;
+    }
+  }
+}
+
+/* snackbar */
+.snackbar {
+  transition: all 0.5s ease;
+  background-color: #323232;
+  color: var(--c-base-100);
+  width: 90vw;
+  padding: var(--p-4);
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  @media all and (min-width: 600px) {
+    max-width: 50vw;
+    padding: var(--p-5) var(--p-7);
+  }
+  .cta {
+    border: 0;
+    background-color: transparent;
+    color: var(--c-secondary-200);
+    i {
+      font-size: var(--fsz-1);
+    }
   }
 }

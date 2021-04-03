@@ -37,6 +37,8 @@
       --c-#{$type}-#{$shade}: #{$value};
     }
   }
+  --c-black:hsl(240, 3%, 12%);
+  --c-link:hsl(210, 100%, 40%);
   //   icon color custom prop
   @each $type, $shades in $icon-colors {
     @each $shade, $value in $shades {

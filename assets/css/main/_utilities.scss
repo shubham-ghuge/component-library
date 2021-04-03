@@ -3,10 +3,20 @@
 .d-flex {
   display: flex;
 }
+
+.d-block{
+  display: block;
+}
+
 .logo {
   height: 50px;
 }
-
+.close{
+  cursor: pointer;
+  position: absolute;
+  right: 0%;
+  top: 2%;
+}
 @for $i from 1 to 10 {
   .h-#{$i}0{
     height: #{$i}0vh;
@@ -17,9 +27,21 @@
     width: #{$i}0vw;
   }
 }
-.close{
-  cursor: pointer;
-  position: absolute;
-  right: 0%;
-  top: 2%;
+.jc-center{
+  justify-content: center;
+}
+.jc-end{
+  justify-content: end;
+}
+.jc-space-between{
+  justify-content: space-between;
+}
+.jc-space-around{
+  justify-content: space-around;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
 }
