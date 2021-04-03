@@ -1,3 +1,35 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--c-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 :root {
   --fsz-5: 3.052rem;
   --fsz-4: 2.441rem;
@@ -1073,38 +1105,6 @@
 }
 .snackbar .cta i {
   font-size: var(--fsz-1);
-}
-
-body {
-  font-family: "Inter", sans-serif;
-}
-
-button {
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  transition: 0.2s all ease-in;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: var(--c-link);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 /*# sourceMappingURL=cssStack.css.map */

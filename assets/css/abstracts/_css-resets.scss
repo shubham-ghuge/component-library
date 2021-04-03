@@ -1,0 +1,28 @@
+body {
+    font-family: "Inter", sans-serif;
+  }
+  button {
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: var(--c-link);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
