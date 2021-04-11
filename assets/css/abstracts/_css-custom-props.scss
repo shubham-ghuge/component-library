@@ -39,6 +39,9 @@
   }
   --c-black:hsl(240, 3%, 12%);
   --c-link:hsl(210, 100%, 40%);
+  --c-grey-apple:hsl(240, 11%, 96%);
+  --c-grey:hsl(0, 0%, 95%);;
+
   //   icon color custom prop
   @each $type, $shades in $icon-colors {
     @each $shade, $value in $shades {

@@ -4,44 +4,50 @@
   display: flex;
 }
 
-.d-block{
+.d-block {
   display: block;
 }
 
 .logo {
   height: 80px;
 }
-.close{
+.close {
   cursor: pointer;
   position: absolute;
   right: 0%;
   top: 2%;
 }
 @for $i from 1 to 10 {
-  .h-#{$i}0{
+  .h-#{$i}0 {
     height: #{$i}0vh;
   }
 }
 @for $i from 1 to 10 {
-  .w-#{$i}0{
+  .w-#{$i}0 {
     width: #{$i}0vw;
   }
 }
-.jc-center{
+.jc-center {
   justify-content: center;
 }
-.jc-end{
+.jc-end {
   justify-content: end;
 }
-.jc-space-between{
+.jc-space-between {
   justify-content: space-between;
 }
-.jc-space-around{
+.jc-space-around {
   justify-content: space-around;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
-.text-left{
+.text-left {
   text-align: left;
+}
+.strike {
+  text-decoration: line-through;
+  color: var(--c-base-200);
+  font-size: 0.8rem;
+  margin-left: .5rem;
 }
