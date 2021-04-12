@@ -137,7 +137,7 @@
       <button class="btn-c-base">Button</button>
       <button class="btn-c-danger">button</button>
       <button class="btn-success">button</button>
-      <button class="btn-primary">button</button>
+      <button class="btn-primary-active">button</button>
       <button class="btn-secondary">button</button>
       <button class="btn-base">Button</button>
       <button class="btn-danger">button</button>
@@ -145,7 +145,7 @@
       <button class="btn-outline-primary">button</button>
       <button class="btn-outline-secondary">button</button>
       <button class="btn-outline-base">Button</button>
-      <button class="btn-outline-danger">button</button>
+      <button class="btn-outline-danger-active">button</button>
 
       <button class="icon-btn-primary"><i class="bx bx-cart"></i></button>
       <button class="icon-btn-secondary"><i class="bx bx-cart"></i></button>
@@ -167,7 +167,7 @@
       </p>
       <div class="dialog-btns jc-end">
         <button class="btn-primary">Accept</button>
-        <button class="btn-c-danger">Decline</button>
+        <button class="btn-c-danger-active">Decline</button>
       </div>
     </div>
 
@@ -183,7 +183,7 @@
         <div class="card-thumbnail">
           <img src="https://via.placeholder.com/200x200" alt="product" />
         </div>
-        <div class="icon">
+        <div class="icon-active">
           <i class="bx bx-cart"></i>
         </div>
         <div class="card-details">
@@ -221,62 +221,77 @@
       </div>
     </div>
     <div>
-      <div class="cart">
-        <div class="cart-heading">
-          <h3>product</h3>
-          <h3>quantity</h3>
-          <h3>price</h3>
-        </div>
-        <div class="product-card">
-          <div class="product-details">
-            <img class="product-img" src="https://via.placeholder.com/100x100" alt="product" />
-            <div class="wrapper">
-              <h3 class="product-title">
-                lorem ips <span>1kg</span>
-              </h3>
-              <h4 class="product-price">
-                ₹ 25.00<span class="strike">₹ 28.00</span>
-              </h4>
-              <h4 class="product-discount">Discount: 10% </h4>
-              <p class="product-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                illum?
-              </p>
-              <p class="d-block d-sm-none"></p>
+      <div class="cart-layout">
+        <div class="cart">
+          <div class="cart-heading">
+            <h3>product</h3>
+            <h3>quantity</h3>
+            <h3>price</h3>
+          </div>
+          <div class="product-card">
+            <div class="product-details">
+              <img class="product-img" src="https://via.placeholder.com/100x100" alt="product" />
+              <div class="wrapper">
+                <h3 class="product-title">
+                  lorem ips <span>1kg</span>
+                </h3>
+                <h4 class="product-price">
+                  ₹ 25.00<span class="strike">₹ 28.00</span>
+                </h4>
+                <h4 class="product-discount">Discount: 10% </h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                  illum?
+                </p>
+                <p class="d-block d-sm-none"></p>
+              </div>
             </div>
-          </div>
-          <div class="quantity">
-            <button class="btn-outline-danger">-</button>
-            <span>3</span>
-            <button class="btn-outline-primary">+</button>
-          </div>
-          <h3 class="final-price">₹25.00</h3>
-        </div>
-
-        <div class="product-card">
-          <div class="product-details">
-            <img class="product-img" src="https://via.placeholder.com/100x100" alt="product" />
-            <div class="wrapper">
-              <h3 class="product-title">
-                lorem ips <span>1kg</span>
-              </h3>
-              <h4 class="product-price">
-                ₹ 25.00<span class="strike">₹ 28.00</span>
-              </h4>
-              <h4 class="product-discount">Discount: 10% </h4>
-              <p class="product-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                illum?
-              </p>
-              <p class="d-block d-sm-none"></p>
+            <div class="quantity">
+              <button class="btn-outline-danger">-</button>
+              <span>3</span>
+              <button class="btn-outline-primary">+</button>
             </div>
+            <h3 class="final-price">₹25.00</h3>
           </div>
-          <div class="quantity">
-            <button class="btn-outline-danger">-</button>
-            <span>3</span>
-            <button class="btn-outline-primary">+</button>
+  
+          <div class="product-card">
+            <div class="product-details">
+              <img class="product-img" src="https://via.placeholder.com/100x100" alt="product" />
+              <div class="wrapper">
+                <h3 class="product-title">
+                  lorem ips <span>1kg</span>
+                </h3>
+                <h4 class="product-price">
+                  ₹ 25.00<span class="strike">₹ 28.00</span>
+                </h4>
+                <h4 class="product-discount">Discount: 10% </h4>
+                <p class="product-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                  illum?
+                </p>
+                <p class="d-block d-sm-none"></p>
+              </div>
+            </div>
+            <div class="quantity">
+              <button class="btn-outline-danger">-</button>
+              <span>3</span>
+              <button class="btn-outline-primary">+</button>
+            </div>
+            <h3 class="final-price">₹25.00</h3>
           </div>
-          <h3 class="final-price">₹25.00</h3>
+        </div>
+        <div class="checkout">
+          <h3 class="muted">You are saving <span>₹ 28.00</span></h3>
+          <button class="coupen">Apply coupen!</button>
+          <div class="wrapper">
+            <p class="muted">Delivery Charges</p>
+            <h3>₹ 28.00</h3>
+          </div>
+          <div class="wrapper">
+            <p class="muted">Total Payable</p>
+            <h3>₹ 280.00</h3>
+          </div>
+          <button class="btn-success">Checkout</button>
         </div>
       </div>
     </div>
