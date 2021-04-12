@@ -3,11 +3,20 @@
 .d-flex {
   display: flex;
 }
-
 .d-block {
-  display: block;
+  display: block!important;
 }
-
+.d-none{
+  display: none!important;
+}
+@include for-large-screen {
+  .d-sm-block {
+    display: block!important;
+  }
+  .d-sm-none{
+    display: none!important;
+  }
+}
 .logo {
   height: 80px;
 }

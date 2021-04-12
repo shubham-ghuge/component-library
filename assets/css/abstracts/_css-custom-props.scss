@@ -93,3 +93,8 @@
   }
 }
 
+@mixin for-large-screen {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
