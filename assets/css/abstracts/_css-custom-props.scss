@@ -94,7 +94,7 @@
 }
 
 @mixin for-large-screen {
-  @media (min-width: 600px) {
+  @media all and (min-width: 600px) {
     @content;
   }
 }
