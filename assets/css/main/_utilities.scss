@@ -1,22 +1,23 @@
 @use '../abstracts' as *;
-
+@use '../abstracts/colors' as *;
 .d-flex {
   display: flex;
 }
 .d-block {
-  display: block!important;
+  display: block !important;
 }
-.d-none{
-  display: none!important;
+.d-none {
+  display: none !important;
 }
 @include for-large-screen {
   .d-sm-block {
-    display: block!important;
+    display: block !important;
   }
-  .d-sm-none{
-    display: none!important;
+  .d-sm-none {
+    display: none !important;
   }
 }
+
 .logo {
   height: 80px;
 }
@@ -48,13 +49,13 @@
 .jc-space-around {
   justify-content: space-around;
 }
-.ai-center{
+.ai-center {
   align-items: center;
 }
-.ai-flex-end{
+.ai-flex-end {
   align-items: flex-end;
 }
-.ai-flex-start{
+.ai-flex-start {
   align-items: flex-start;
 }
 .text-center {
@@ -63,9 +64,18 @@
 .text-left {
   text-align: left;
 }
+@each $color-type, $shades in $colors {
+  .text-#{$color-type} {
+    color: var(--c-#{$color-type}-200);
+  }
+}
+.muted {
+  color: var(--c-black);
+  font-weight: 600;
+}
 .strike {
   text-decoration: line-through;
   color: var(--c-base-200);
   font-size: 0.8rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }

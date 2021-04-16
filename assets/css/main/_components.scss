@@ -80,7 +80,7 @@
   }
 }
 
-// - Alert
+/* alerts */
 
 @mixin alert($c) {
   .alert-#{$c} {
@@ -89,9 +89,12 @@
     align-items: flex-start;
     padding: var(--p-4) var(--p-2);
     border-radius: var(--br-1);
-    max-width: 70vw;
+    max-width: 90vw;
     color: var(--c-#{$c}-300);
     background-color: var(--c-#{$c}-100);
+    @include for-large-screen() {
+      max-width: 50vw;
+    }
     & > .alert-content {
       margin: 0 var(--p-2);
     }
@@ -107,22 +110,12 @@
 @include alert("base");
 
 .alert-secondary {
-  display: flex;
-  align-items: flex-start;
-  padding: var(--p-4) var(--p-2);
-  border-radius: var(--br-1);
-  max-width: 70vw;
+  @extend .alert-primary;
   color: #a47e1b;
   background-color: #fae588;
-  & > .alert-content {
-    margin: var(--p-1);
-  }
-  i {
-    font-size: var(--fsz-2);
-  }
 }
 
-// - Badge
+/* Badge */
 @mixin badge($c) {
   .badge-#{$c} {
     height: 10px;
@@ -681,10 +674,6 @@
       margin: 0.5rem;
     }
   }
-  .muted {
-    color: var(--c-black);
-    font-weight: 600;
-  }
   .btn-success {
     font-weight: 600;
     font-size: var(--fsz-1);
@@ -692,14 +681,11 @@
   }
 }
 .wishlist-card {
-  border: 1px solid lightgrey;
+  // border: 1px solid lightgrey;
   background-color: #fff;
   max-width: 230px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: var(--br-2);
-  // @include for-large-screen() {
-  //   max-width: 230px;
-  // }
   img {
     height: 200px;
     width: 100%;
@@ -712,21 +698,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h3,
-    p {
-      padding: var(--p-1);
+  }
+  &-header {
+    padding: var(--p-1);
+  }
+  &-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    margin: 0 var(--p-1) var(--p-2);
+  }
+  &-price {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 var(--p-1) var(--p-2);
+    line-height: 1;
+    font-weight: 600;
+    h4{
+      font-size: 1.25rem;
     }
-    .wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      button {
-        margin: 0 var(--p-1) var(--p-1);
-      }
-      button:nth-child(2) {
-        width: 100%;
-        margin: 0 var(--p-1)  var(--p-1) 0;
-      }
+    p{
+      margin: 0 0 0 var(--p-2);
+      font-size: .9rem;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    button {
+      margin: 0 var(--p-1) var(--p-1);
+    }
+    button:nth-child(2) {
+      width: 100%;
+      margin: 0 var(--p-1) var(--p-1) 0;
     }
   }
 }
