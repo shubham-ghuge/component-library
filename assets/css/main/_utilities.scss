@@ -79,3 +79,9 @@
   font-size: 0.8rem;
   margin-left: 0.5rem;
 }
+
+.flex-layout{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--p-4);
+}

@@ -6,6 +6,7 @@ button {
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   transition: 0.2s all ease-in;
+  overflow-x: hidden;
 }
 h1,
 h2,
