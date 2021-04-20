@@ -1,0 +1,5 @@
+@mixin for-large-screen {
+  @media all and (min-width: 600px) {
+    @content;
+  }
+}

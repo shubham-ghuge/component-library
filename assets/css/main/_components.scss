@@ -39,6 +39,11 @@
   var(--icon-secondary-200),
   "secondary"
 );
+@include avatar-sm(
+  var(--icon-abstract-100),
+  var(--icon-abstract-200),
+  "abstract"
+);
 
 /* large icon avatar */
 

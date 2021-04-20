@@ -66,11 +66,35 @@
   .p-#{$i}{
     padding: var(--p-#{$i});
   }
+  .pt-#{$i}{
+    padding-top: var(--p-#{$i});
+  }
+  .pb-#{$i}{
+    padding-bottom: var(--p-#{$i});
+  }
+  .py-#{$i}{
+    padding-top: var(--p-#{$i});
+  }
+  .px-#{$i}{
+    padding: 0 var(--p-#{$i});
+  }
 }
 
 @for $i from 0 through 7 {
   .m-#{$i}{
     margin: var(--p-#{$i});
+  }
+  .mt-#{$i}{
+    margin-top: var(--p-#{$i});
+  }
+  .mb-#{$i}{
+    margin-bottom: var(--p-#{$i});
+  }
+  .my-#{$i}{
+    margin: var(--p-#{$i}) 0;
+  }
+  .mx-#{$i}{
+    margin: 0 var(--p-#{$i});
   }
 }
 

@@ -17,7 +17,11 @@
     display: none !important;
   }
 }
-
+.link-reset{
+  &:hover{
+    text-decoration: none;
+  }
+}
 .logo {
   height: 80px;
 }
