@@ -762,7 +762,6 @@
   }
 }
 
-
 .input-addon-success {
   display: inline-flex;
   align-items: center;
@@ -873,11 +872,13 @@
       }
     }
   }
-  .nav-link + .active {
+  .nav-link-active {
+    @extend .nav-link;
     background-color: var(--c-success-100);
+    color: var(--icon-primary-300) !important;
     a,
     .icon {
-      color: var(--icon-primary-300);
+      color: var(--icon-primary-300) !important;
     }
   }
   .input-addon-success {

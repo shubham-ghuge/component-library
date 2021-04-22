@@ -2039,7 +2039,7 @@ a:hover {
   height: 40px;
   margin: 0 var(--p-2) 0 0;
 }
-.side-menu .nav-link {
+.side-menu .nav-link, .side-menu .nav-link-active {
   font-size: var(--fsz-1);
   text-transform: capitalize;
   margin: 0 var(--p-4) 0;
@@ -2049,7 +2049,7 @@ a:hover {
   display: inline-block;
   width: 80%;
 }
-.side-menu .nav-link .icon, .side-menu .nav-link .grocery-card .icon-active, .grocery-card .side-menu .nav-link .icon-active {
+.side-menu .nav-link .icon, .side-menu .nav-link-active .icon, .side-menu .nav-link .grocery-card .icon-active, .side-menu .nav-link-active .grocery-card .icon-active, .grocery-card .side-menu .nav-link .icon-active, .grocery-card .side-menu .nav-link-active .icon-active {
   color: var(--c-success-100);
   vertical-align: sub;
   display: inline-flex;
@@ -2058,21 +2058,22 @@ a:hover {
   margin: 0 var(--p-1) 0 0;
   font-size: var(--fsz-2);
 }
-.side-menu .nav-link:hover {
+.side-menu .nav-link:hover, .side-menu .nav-link-active:hover {
   background-color: var(--c-success-100);
   color: var(--icon-primary-300);
 }
-.side-menu .nav-link:hover .icon, .side-menu .nav-link:hover .grocery-card .icon-active, .grocery-card .side-menu .nav-link:hover .icon-active {
+.side-menu .nav-link:hover .icon, .side-menu .nav-link-active:hover .icon, .side-menu .nav-link:hover .grocery-card .icon-active, .side-menu .nav-link-active:hover .grocery-card .icon-active, .grocery-card .side-menu .nav-link:hover .icon-active, .grocery-card .side-menu .nav-link-active:hover .icon-active {
   color: var(--icon-primary-300);
 }
-.side-menu .nav-link + .active {
+.side-menu .nav-link-active {
   background-color: var(--c-success-100);
+  color: var(--icon-primary-300) !important;
 }
-.side-menu .nav-link + .active a,
-.side-menu .nav-link + .active .icon,
-.side-menu .nav-link + .active .grocery-card .icon-active,
-.grocery-card .side-menu .nav-link + .active .icon-active {
-  color: var(--icon-primary-300);
+.side-menu .nav-link-active a,
+.side-menu .nav-link-active .icon,
+.side-menu .nav-link-active .grocery-card .icon-active,
+.grocery-card .side-menu .nav-link-active .icon-active {
+  color: var(--icon-primary-300) !important;
 }
 .side-menu .input-addon-success {
   width: 40vw;
@@ -2082,7 +2083,7 @@ a:hover {
   .side-menu {
     justify-content: space-around;
   }
-  .side-menu .nav-link {
+  .side-menu .nav-link, .side-menu .nav-link-active {
     width: auto;
     margin: 0 var(--p-3) 0 0;
   }
