@@ -2120,17 +2120,15 @@ a:hover {
   }
 }
 
-.input-base {
+.input-livefarm, .input-livefarm-disabled {
   position: relative;
   background-color: #1b1f26;
   display: flex;
   flex-direction: column;
   border-radius: var(--br-2);
-  margin: 1rem auto;
-  width: 90vw;
   transition: all 0.3s ease-in;
 }
-.input-base input {
+.input-livefarm input, .input-livefarm-disabled input {
   z-index: var(--z-1);
   font-weight: 500;
   color: #b8bfcc;
@@ -2138,10 +2136,10 @@ a:hover {
   border: 0;
   background-color: transparent;
 }
-.input-base input:focus {
+.input-livefarm input:focus, .input-livefarm-disabled input:focus {
   outline: none;
 }
-.input-base label {
+.input-livefarm label, .input-livefarm-disabled label {
   transition: all 0.5s;
   z-index: var(--z-0);
   position: absolute;
@@ -2152,15 +2150,27 @@ a:hover {
   line-height: 22px;
   color: #525966;
 }
-.input-base:focus-within label {
+.input-livefarm:focus-within label, .input-livefarm-disabled:focus-within label {
   color: #8b919c;
 }
-.input-base:focus-within ~ input:focus ~ label,
-.input-base input:valid ~ label {
+.input-livefarm:focus-within ~ input:focus ~ label, .input-livefarm-disabled:focus-within ~ input:focus ~ label,
+.input-livefarm input:valid ~ label,
+.input-livefarm-disabled input:valid ~ label {
   top: 7%;
   font-size: 11px;
   line-height: 1.4;
   font-weight: 400;
+}
+
+.input-livefarm-disabled {
+  background-color: #171a1f;
+}
+.input-livefarm-disabled input {
+  pointer-events: none;
+  color: #8b919c;
+}
+.input-livefarm-disabled:hover {
+  cursor: not-allowed;
 }
 
 /*# sourceMappingURL=cssStack.css.map */

@@ -25,6 +25,24 @@ body {
   text-transform: uppercase;
   font-size: var(--fsz-3);
 }
+.close-icon {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  border: 0;
+  padding: var(--p-1);
+  background-color: #000;
+  border-radius: 50%;
+  .icon {
+    color: $gray-400;
+    font-size: var(--fsz-2);
+  }
+  @include for-large-screen() {
+    top: 3%;
+    padding: var(--p-2);
+    right: 1%;
+  }
+}
 .dropdown {
   position: absolute;
   right: 5%;
@@ -530,6 +548,70 @@ header {
     }
     &-card {
       width: 250px;
+    }
+  }
+}
+
+.user {
+  &-account {
+    position: relative;
+    margin: 60px var(--p-2) 0;
+    h3 {
+      font-size: var(--fsz-2);
+      color: $gray-200;
+      text-transform: capitalize;
+      margin: var(--p-2) 0 var(--p-4);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--p-4);
+    }
+    .icon-btn-base {
+      width: 30vw;
+      font-size: 1rem;
+    }
+  }
+  &-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    column-gap: var(--p-2);
+    .channel-icon {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 50%;
+    }
+    .input-livefarm,
+    .input-livefarm-disabled {
+      align-self: center;
+    }
+  }
+
+  @include for-large-screen() {
+    &-account {
+      width: 80vw;
+      margin: 60px auto 0;
+      .icon-btn-base {
+        width: 10vw;
+      }
+      .input-livefarm {
+        width: 40vw;
+      }
+    }
+    &-info {
+      .channel-icon {
+        height: 150px;
+        width: 150px;
+      }
+      .input-livefarm,
+      .input-livefarm-disabled {
+        align-self: flex-start;
+        margin: 1rem 0 0;
+        width: 28vw;
+      }
     }
   }
 }

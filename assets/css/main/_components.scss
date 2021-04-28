@@ -922,14 +922,12 @@
 }
 // input component
 
-.input-base {
+.input-livefarm {
   position: relative;
-  background-color:rgb(27, 31, 38);
+  background-color: rgb(27, 31, 38);
   display: flex;
   flex-direction: column;
   border-radius: var(--br-2);
-  margin: 1rem auto;
-  width: 90vw;
   transition: all 0.3s ease-in;
   input {
     z-index: var(--z-1);
@@ -951,11 +949,11 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 22px;
-    color:rgb(82, 89, 102);
+    color: rgb(82, 89, 102);
   }
   &:focus-within {
     label {
-      color:rgb(139, 145, 156);
+      color: rgb(139, 145, 156);
     }
   }
   &:focus-within ~ input:focus ~ label,
@@ -964,5 +962,16 @@
     font-size: 11px;
     line-height: 1.4;
     font-weight: 400;
+  }
+}
+.input-livefarm-disabled {
+  @extend .input-livefarm;
+  background-color: rgb(23, 26, 31);
+  input {
+    pointer-events: none;
+    color: rgb(139, 145, 156);
+  }
+  &:hover{
+    cursor: not-allowed;
   }
 }
