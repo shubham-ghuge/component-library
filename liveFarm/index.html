@@ -27,7 +27,7 @@
         <li>
           <a href="#" class="link-reset">
             <span class="avatar-sm-i-basic">
-              <i class="bx bx-play-circle"></i>
+              <i class="icon bx bx-play-circle"></i>
             </span>
             <span class="text">Playlists</span>
           </a>
@@ -35,7 +35,7 @@
         <li>
           <a href="#" class="link-reset">
             <span class="avatar-sm-i-basic">
-              <i class="bx bx-user"></i>
+              <i class="icon bx bx-user"></i>
             </span>
             <span class="text">account</span>
           </a>
@@ -54,6 +54,7 @@
         </p>
       </div>
     </section>
+
     <section class="video-listing">
       <h3 class="heading">Videos</h3>
       <figure class="video-card">
@@ -146,22 +147,39 @@
       ></iframe>
       <div class="video-player-description">
         <div class="video-player-actions">
-          <button class="icon-btn-primary btn-addon">
+          <button class="icon-btn-base btn-addon">
             <span><i class="icon bx bxs-heart"></i></span>
             <span class="text">Like</span>
           </button>
-          <button class="icon-btn-primary btn-addon">
+          <button class="icon-btn-base btn-addon">
             <span><i class="icon bx bx-history"></i></span>
             <span class="text">later</span>
           </button>
-          <button class="icon-btn-primary btn-addon">
+          <button class="icon-btn-base btn-addon">
             <span><i class="icon bx bx-bookmark"></i></span>
             <span class="text">save</span>
           </button>
-          <button class="icon-btn-primary btn-addon">
+          <button class="icon-btn-base btn-addon">
             <span><i class="icon bx bx-plus-circle"></i></span>
             <span class="text">add</span>
           </button>
+          <div class="dropdown">
+            <button class="close">x</button>
+            <ul>
+              <li>
+                <label for="check1">
+                  <input type="checkbox" name="check1" id="check1" />Test1
+                </label>
+              </li>
+              <li>
+                <div class="input-addon">
+                  <input type="text" placeholder="Enter Here" /><button>
+                    <i class="icon bx bx-plus-circle"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="video-player-user">
           <div class="u-info">
@@ -170,8 +188,12 @@
             <p class="sub-count">25k Subscribers</p>
           </div>
           <div class="video-info">
-            <p><span class="icon"><i class="icon bx bx-show-alt"></i></span>1000 </p>
-            <p><span class="icon"><i class="icon bx bxs-heart"></i></span>1000 </p>
+            <p>
+              <span class="icon"><i class="icon bx bx-show-alt"></i></span>1000
+            </p>
+            <p>
+              <span class="icon"><i class="icon bx bxs-heart"></i></span>1000
+            </p>
           </div>
         </div>
         <div class="wrapper">
@@ -186,6 +208,91 @@
           </p>
         </div>
       </div>
+    </section>
+    <section class="playlist">
+      <h3 class="heading">All Playlists</h3>
+      <div class="playlist-layout">
+        <figure class="playlist-card">
+          <img src="./icons8-video-file-96.png" class="icon-2x" alt="" />
+          <figcaption class="playlist-title">
+            <p class="playlist-heading">
+              playlist name
+              <span><i class="icon bx bx-dots-vertical-rounded"></i></span>
+            </p>
+            <p>3 videos</p>
+          </figcaption>
+        </figure>
+        <figure class="playlist-card">
+          <img src="./icons8-video-file-96.png" class="icon-2x" alt="" />
+          <figcaption class="playlist-title">
+            <p class="playlist-heading">
+              playlist name
+              <span><i class="icon bx bx-dots-vertical-rounded"></i></span>
+            </p>
+            <p>3 videos</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="playlist">
+      <h3 class="heading">Videos</h3>
+      <figure class="video-card">
+        <img
+          src="https://img-assets.netlify.app/video-thumbnails/amazing-ideas.png"
+          alt="thumbnail"
+          class="video-card-thumbnail"
+          loading="lazy"
+        />
+        <figcaption class="video-card-details">
+          <p class="channel-name">
+            Lorem ipsum <span class="date">jan 12, 2021</span>
+          </p>
+          <h4 class="video-card-title">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </h4>
+          <p class="video-card-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+            magnam fuga voluptatum sunt at. Perferendis unde perspiciatis
+            aliquam cupiditate id.
+          </p>
+          <div class="video-card-stats">
+            <span class="count"
+              ><i class="icon bx bx-show-alt"></i>23 views</span
+            >
+            <span class="likes"><i class="icon bx bxs-heart"></i>23 likes</span>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="video-card">
+        <img
+          src="https://img-assets.netlify.app/video-thumbnails/amazing-ideas.png"
+          alt="thumbnail"
+          class="video-card-thumbnail"
+          loading="lazy"
+        />
+        <figcaption class="video-card-details">
+          <p class="channel-name">
+            Lorem ipsum <span class="date">jan 12, 2021</span>
+          </p>
+          <h4 class="video-card-title">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </h4>
+          <p class="video-card-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+            magnam fuga voluptatum sunt at. Perferendis unde perspiciatis
+            aliquam cupiditate id.
+          </p>
+          <div class="video-card-stats">
+            <span class="count"
+              ><i class="icon bx bx-show-alt"></i>23 views</span
+            >
+            <span class="likes"><i class="icon bx bxs-heart"></i>23 likes</span>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
+    <section class="user">
+      <div class="input-base"><input type="text" required/><label for="">Enter name</label></div>
     </section>
   </body>
 </html>

@@ -2120,4 +2120,47 @@ a:hover {
   }
 }
 
+.input-base {
+  position: relative;
+  background-color: #1b1f26;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--br-2);
+  margin: 1rem auto;
+  width: 90vw;
+  transition: all 0.3s ease-in;
+}
+.input-base input {
+  z-index: var(--z-1);
+  font-weight: 500;
+  color: #b8bfcc;
+  padding: var(--p-4) var(--p-2) var(--p-2);
+  border: 0;
+  background-color: transparent;
+}
+.input-base input:focus {
+  outline: none;
+}
+.input-base label {
+  transition: all 0.5s;
+  z-index: var(--z-0);
+  position: absolute;
+  left: var(--p-2);
+  bottom: 20%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 22px;
+  color: #525966;
+}
+.input-base:focus-within label {
+  color: #8b919c;
+}
+.input-base:focus-within ~ input:focus ~ label,
+.input-base input:valid ~ label {
+  top: 7%;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=cssStack.css.map */
