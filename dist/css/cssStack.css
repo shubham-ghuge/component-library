@@ -1513,7 +1513,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   margin: 0 0.25rem 0.25rem 0;
-  max-width: 170px;
+  width: 170px;
   border-radius: var(--br-2);
   overflow: hidden;
   border: 1px solid lightgrey;
@@ -1523,7 +1523,7 @@ a:hover {
 @media all and (min-width: 600px) {
   .grocery-card {
     margin: 1rem;
-    max-width: 200px;
+    width: 200px;
   }
 }
 .grocery-card:hover {
@@ -1557,11 +1557,11 @@ a:hover {
   font-size: var(--fsz-2);
   line-height: 1;
 }
-.grocery-card .icon:hover, .grocery-card .icon-active:hover, .grocery-card .icon:focus, .grocery-card .icon-active:focus {
+.grocery-card .icon:focus, .grocery-card .icon-active:focus {
   background-color: var(--c-success-300);
   color: #fff;
 }
-.grocery-card .icon:hover i, .grocery-card .icon-active:hover i, .grocery-card .icon:focus i, .grocery-card .icon-active:focus i {
+.grocery-card .icon:focus i, .grocery-card .icon-active:focus i {
   color: #fff;
 }
 .grocery-card .icon-active {
@@ -1579,13 +1579,11 @@ a:hover {
 }
 .card-thumbnail img {
   object-fit: cover;
-}
-@media all and (min-width: 600px) {
-  .card-thumbnail {
-    height: 200px;
-  }
+  height: 100%;
+  width: 100%;
 }
 .card-details {
+  flex-grow: 1;
   padding: 0.25rem;
 }
 .card-header {
@@ -1596,21 +1594,9 @@ a:hover {
   font-weight: 600;
   margin: 0.25rem 0;
 }
-.card-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  margin: 0 0 0.25rem;
-}
-@media all and (min-width: 600px) {
-  .card-description {
-    -webkit-line-clamp: 2;
-  }
-}
 .card-cta, .card-cta-active {
-  margin: 0.5rem 0 0;
-  width: 100%;
+  display: inline-block;
+  margin: 0 var(--p-2) 0.5rem;
   border: 0;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -1925,6 +1911,9 @@ a:hover {
 .wishlist-card-header {
   padding: var(--p-1);
 }
+.wishlist-card-details {
+  flex-grow: 1;
+}
 .wishlist-card-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1957,6 +1946,9 @@ a:hover {
 .wishlist-card .wrapper button:nth-child(2) {
   width: 100%;
   margin: 0 var(--p-1) var(--p-1) 0;
+}
+.wishlist-card .icon, .wishlist-card .grocery-card .icon-active, .grocery-card .wishlist-card .icon-active {
+  margin: 0;
 }
 
 .input-addon-success {
@@ -2171,6 +2163,63 @@ a:hover {
 }
 .input-livefarm-disabled:hover {
   cursor: not-allowed;
+}
+
+.notify {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  border-radius: var(--p-1);
+  padding: var(--p-2) var(--p-4);
+  color: var(--c-base-100);
+  background-color: #323232;
+}
+
+.jumbotron {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: var(--br-2);
+  margin: 60px var(--p-7) var(--p-2);
+}
+.jumbotron .content {
+  width: 90%;
+}
+.jumbotron-title {
+  font-size: var(--fsz-2);
+}
+.jumbotron-description {
+  font-size: 1rem;
+  margin: var(--p-2) 0 var(--p-4);
+}
+.jumbotron-cta {
+  text-transform: capitalize;
+  display: inline-block;
+  border-radius: var(--br-2);
+  font-size: 1rem;
+  padding: var(--p-5);
+}
+@media all and (min-width: 600px) {
+  .jumbotron {
+    height: 70vh;
+  }
+  .jumbotron .content {
+    width: 70%;
+  }
+  .jumbotron-title {
+    font-size: var(--fsz-3);
+  }
+  .jumbotron-description {
+    font-size: var(--fsz-1);
+    margin: var(--p-3) 0 var(--p-5);
+  }
+  .jumbotron-cta {
+    font-size: var(--fsz-1);
+    padding: var(--p-6);
+  }
 }
 
 /*# sourceMappingURL=cssStack.css.map */

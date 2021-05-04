@@ -333,7 +333,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 0.25rem 0.25rem 0;
-  max-width: 170px;
+  width: 170px;
   border-radius: var(--br-2);
   overflow: hidden;
   border: 1px solid lightgrey;
@@ -341,7 +341,7 @@
   transition: all 0.5s ease-in-out;
   @include for-large-screen {
     margin: 1rem;
-    max-width: 200px;
+    width: 200px;
   }
 
   &:hover {
@@ -374,7 +374,6 @@
       font-size: var(--fsz-2);
       line-height: 1;
     }
-    &:hover,
     &:focus {
       background-color: var(--c-success-300);
       color: #fff;
@@ -399,12 +398,12 @@
     overflow: hidden;
     img {
       object-fit: cover;
-    }
-    @include for-large-screen {
-      height: 200px;
+      height: 100%;
+      width: 100%;
     }
   }
   &-details {
+    flex-grow: 1;
     padding: 0.25rem;
   }
   &-header {
@@ -415,19 +414,9 @@
     font-weight: 600;
     margin: 0.25rem 0;
   }
-  &-description {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    margin: 0 0 0.25rem;
-    @include for-large-screen {
-      -webkit-line-clamp: 2;
-    }
-  }
   &-cta {
-    margin: 0.5rem 0 0;
-    width: 100%;
+    display: inline-block;
+    margin: 0 var(--p-2) 0.5rem;
     border: 0;
     padding: 0.5rem;
     border-radius: 0.25rem;
@@ -727,6 +716,9 @@
   &-header {
     padding: var(--p-1);
   }
+  &-details {
+    flex-grow: 1;
+  }
   &-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -759,6 +751,9 @@
       width: 100%;
       margin: 0 var(--p-1) var(--p-1) 0;
     }
+  }
+  .icon {
+    margin: 0;
   }
 }
 
@@ -971,7 +966,60 @@
     pointer-events: none;
     color: rgb(139, 145, 156);
   }
-  &:hover{
+  &:hover {
     cursor: not-allowed;
+  }
+}
+.notify {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  border-radius: var(--p-1);
+  padding: var(--p-2) var(--p-4);
+  color: var(--c-base-100);
+  background-color: #323232;
+}
+.jumbotron {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: var(--br-2);
+  margin: 60px var(--p-7) var(--p-2);
+  .content {
+    width: 90%;
+  }
+  &-title {
+    font-size: var(--fsz-2);
+  }
+  &-description {
+    font-size: 1rem;
+    margin: var(--p-2) 0 var(--p-4);
+  }
+  &-cta {
+    text-transform: capitalize;
+    display: inline-block;
+    border-radius: var(--br-2);
+    font-size: 1rem;
+    padding: var(--p-5);
+  }
+  @include for-large-screen() {
+    height: 70vh;
+    .content {
+      width: 70%;
+    }
+    &-title {
+      font-size: var(--fsz-3);
+    }
+    &-description {
+      font-size: var(--fsz-1);
+      margin: var(--p-3) 0 var(--p-5);
+    }
+    &-cta {
+      font-size: var(--fsz-1);
+      padding: var(--p-6);
+    }
   }
 }

@@ -566,6 +566,8 @@ header {
       display: flex;
       flex-direction: column;
       row-gap: var(--p-4);
+      -webkit-row-gap: var(--p-4);
+      -moz-row-gap: var(--p-4);
     }
     .icon-btn-base {
       width: 30vw;
@@ -577,6 +579,8 @@ header {
     align-items: flex-start;
     justify-content: start;
     column-gap: var(--p-2);
+    -webkit-column-gap: var(--p-2);
+    -moz-column-gap: var(--p-2);
     .channel-icon {
       height: 80px;
       width: 80px;

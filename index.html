@@ -21,7 +21,9 @@
     />
   </head>
   <body>
-    <div class="input-base"><input type="text" required/><label for="">Test</label></div>
+    <div class="input-base">
+      <input type="text" required /><label for="">Test</label>
+    </div>
     <div
       style="display: flex; justify-content: space-between; align-items: center"
     >
@@ -177,10 +179,13 @@
         <i class="bx bx-x"></i>
       </button>
     </div>
-    <div class="d-flex ai-center">
+    <div class="d-flex" style="flex-wrap: wrap; justify-content: center">
       <div class="grocery-card">
         <div class="card-thumbnail">
-          <img src="https://via.placeholder.com/200x200" alt="product" />
+          <img
+            src="https://media.starquik.com/catalog/product/SQ111813.jpg"
+            alt="product"
+          />
         </div>
         <div class="icon">
           <i class="bx bx-shopping-bag"></i>
@@ -191,16 +196,71 @@
           <p class="card-price">
             ₹25.00<span class="strike">MRP ₹ 28.00</span>
           </p>
-          <p class="card-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-            illum?
-          </p>
-          <button class="card-cta">Add To Cart</button>
         </div>
+        <button class="card-cta">Add To Cart</button>
       </div>
-      <figure class="wishlist-card">
-        <img src="https://via.placeholder.com/200x200" alt="product" />
-        <figcaption>
+      <div class="grocery-card">
+        <div class="card-thumbnail">
+          <img
+            src="https://media.starquik.com/catalog/product/SQ111813.jpg"
+            alt="product"
+          />
+        </div>
+        <div class="icon">
+          <i class="bx bx-shopping-bag"></i>
+        </div>
+        <div class="card-details">
+          <h3 class="card-header">Incredible Cotton Salad</h3>
+          <span class="badge-rect-danger">10% OFF</span>
+          <p class="card-price">
+            ₹25.00<span class="strike">MRP ₹ 28.00</span>
+          </p>
+        </div>
+        <button class="card-cta">Add To Cart</button>
+      </div>
+      <div class="grocery-card">
+        <div class="card-thumbnail">
+          <img
+            src="https://media.starquik.com/catalog/product/SQ111813.jpg"
+            alt="product"
+          />
+        </div>
+        <div class="icon">
+          <i class="bx bx-shopping-bag"></i>
+        </div>
+        <div class="card-details">
+          <h3 class="card-header">orange</h3>
+          <span class="badge-rect-danger">10% OFF</span>
+          <p class="card-price">
+            ₹25.00<span class="strike">MRP ₹ 28.00</span>
+          </p>
+        </div>
+        <button class="card-cta">Add To Cart</button>
+      </div>
+      <div class="grocery-card">
+        <div class="card-thumbnail">
+          <img
+            src="https://media.starquik.com/catalog/product/SQ111813.jpg"
+            alt="product"
+          />
+        </div>
+        <div class="icon">
+          <i class="bx bx-shopping-bag"></i>
+        </div>
+        <div class="card-details">
+          <h3 class="card-header">orange</h3>
+          <span class="badge-rect-danger">10% OFF</span>
+          <p class="card-price">
+            ₹25.00<span class="strike">MRP ₹ 28.00</span>
+          </p>
+        </div>
+        <button class="card-cta">Add To Cart</button>
+      </div>
+    </div>
+    <figure class="wishlist-card">
+      <img src="https://via.placeholder.com/200x200" alt="product" />
+      <figcaption>
+        <div class="wishlist-details">
           <h3 class="wishlist-card-header">orange</h3>
           <p class="wishlist-card-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
@@ -211,17 +271,30 @@
             <p class="muted strike">₹25.00</p>
             <p class="text-danger">10%</p>
           </div>
-          <div class="wrapper">
-            <button class="btn-outline-danger btn-addon">
-              <i class="bx bx-trash"></i>
-            </button>
-            <button class="btn-success btn-addon m-3">
-              <span><i class="bx bxs-cart-add"></i></span>
-              Add To Cart
-            </button>
-          </div>
-        </figcaption>
-      </figure>
+        </div>
+        <div class="wrapper">
+          <button class="btn-outline-danger btn-addon">
+            <i class="icon bx bx-trash"></i>
+          </button>
+          <button class="btn-success btn-addon m-3">
+            <span><i class="bx bxs-cart-add"></i></span>
+            Add To Cart
+          </button>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div class="notify">Product is added to cart</div>
+    <div class="jumbotron bgc-success-100">
+      <div class="content">
+        <h3 class="jumbotron-title">
+          Your cart is lighter than a feather 
+        </h3>
+        <p class="jumbotron-description">
+          Continue shopping to add items to your cart. Here are some offers to get you started 
+        </p>
+        <a href="#" class="jumbotron-cta btn-outline-success bgc-base-100">go shopping</a>
+      </div>
     </div>
   </body>
 </html>

@@ -569,6 +569,8 @@ header .active .avatar-sm-i-basic {
   display: flex;
   flex-direction: column;
   row-gap: var(--p-4);
+  -webkit-row-gap: var(--p-4);
+  -moz-row-gap: var(--p-4);
 }
 .user-account .icon-btn-base {
   width: 30vw;
@@ -579,6 +581,8 @@ header .active .avatar-sm-i-basic {
   align-items: flex-start;
   justify-content: start;
   column-gap: var(--p-2);
+  -webkit-column-gap: var(--p-2);
+  -moz-column-gap: var(--p-2);
 }
 .user-info .channel-icon {
   height: 80px;
