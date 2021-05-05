@@ -763,6 +763,13 @@ a:hover {
   column-gap: var(--p-4);
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .avatar-sm-i-basic {
   position: relative;
   background-color: var(--icon-base-200);
@@ -1615,19 +1622,17 @@ a:hover {
 .menu-icon {
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  display: flex;
   width: 35px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   cursor: pointer;
   position: relative;
 }
 .menu-icon input[type=checkbox] {
-  height: 100%;
-  cursor: pointer;
+  height: 30px;
+  width: 30px;
   position: absolute;
-  width: 100%;
+  top: -0.8rem;
+  left: 0;
+  cursor: pointer;
   opacity: 0;
 }
 .menu-icon label {
@@ -1636,8 +1641,8 @@ a:hover {
 }
 .menu-icon label span:before, .menu-icon label span:after, .menu-icon label span {
   display: block;
-  height: 2px;
-  width: 35px;
+  height: 1px;
+  width: 30px;
   background-color: #000;
 }
 .menu-icon label span:before, .menu-icon label span:after {
@@ -1645,12 +1650,12 @@ a:hover {
   position: absolute;
 }
 .menu-icon label span:before {
-  margin-top: -10px;
+  margin-top: -8px;
   transition: margin, transform 0.2s;
   transition-delay: 0.2s, 0;
 }
 .menu-icon label span:after {
-  margin-top: 10px;
+  margin-top: 8px;
   transition: margin, transform 0.2s;
   transition-delay: 0, 0.2s;
 }
@@ -2152,6 +2157,14 @@ a:hover {
   font-size: 11px;
   line-height: 1.4;
   font-weight: 400;
+}
+.input-livefarm::after, .input-livefarm-disabled::after {
+  color: #fff;
+  content: attr(data-error);
+  opacity: 0;
+}
+.input-livefarminput:valid ~ .input-livefarm::after, .input-livefarminput:valid ~ .input-livefarm-disabled::after {
+  opacity: 1;
 }
 
 .input-livefarm-disabled {
