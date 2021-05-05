@@ -25,14 +25,14 @@
 - [x] Input
     - textbox
     - validation and errors styled (look into material ui or bootstrap for this)
-- [] Lists
+- [ ] Lists
     - Spaced (like normal lists)
     - Stacked (Notification Page)
 [x] Navigation
     - Desktop (Simple)
     - Submenus (do later)
     - Hamburger/Drawer (do later)
-- [] Modal
+- [ ] Modal
 - Slider (do later)
 - Simplified Grid
     - grid-2: two items in a grid
