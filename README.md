@@ -1,42 +1,38 @@
 # component-library
-- color palette
-- typography
-- Avatar
-- Alert
-- Badge
+[x] color palette
+[x] typography
+[x] Avatar
+[x] Alert
+[x] Badge
     - Badge on Icons
     - Badge on Avatars
-- custom icons
+[x] custom icons
     - menu
     - loader
     - close
-- Button
+[x] Button
     - Primary
     - Link
     - Icon Button
     - Floating Action Button
-- Card
+[x] Card
     - Cards with badges
     - Cards with dismiss
     - Cards with text overlay
     - Text only cards
     - Vertical/Horizontal cards
     - Cards with shadow
-- Image
-    - responsive image
-    - round image
-- Input
+[x] Input
     - textbox
     - validation and errors styled (look into material ui or bootstrap for this)
-- Lists
+[] Lists
     - Spaced (like normal lists)
     - Stacked (Notification Page)
-- Navigation
+[x] Navigation
     - Desktop (Simple)
     - Submenus (do later)
     - Hamburger/Drawer (do later)
-- Modal
-- Rating (for ecommerce)
+[] Modal
 - Slider (do later)
 - Simplified Grid
     - grid-2: two items in a grid
