@@ -73,6 +73,9 @@
 .text-left {
   text-align: left;
 }
+.text-capitalize{
+  text-transform: capitalize;
+}
 @each $color-type, $shades in $colors {
   .text-#{$color-type} {
     color: var(--c-#{$color-type}-200);

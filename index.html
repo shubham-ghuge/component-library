@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png" />
     <link rel="stylesheet" href="./dist/css/cssStack.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <!-- inter -->
     <link
@@ -21,319 +22,505 @@
     />
   </head>
   <body>
-    <style>
-      @media all and (max-width: 600px) {
-        #menu {
-          display: none;
-        }
-      }
-    </style>
-    <header class="side-menu">
-      <a href="#" class="logo-img"
-        ><img
-          src="https://api-farmers-grocery.herokuapp.com/images/logo-trans.png"
-          alt="logo"
-        />Farmers Grocery</a
-      >
-      <div class="input-addon-success d-none d-sm-block" tabindex="1">
-        <span class="icon"><i class="bx bx-search-alt-2"></i></span>
-        <input type="search" placeholder="Search Products, Brands & More" />
-      </div>
-      <nav id="menu">
+    <header>
+      <a href="#"
+        ><img src="./assets/img/logo-sm.png" class="logo" alt="logo"
+      /></a>
+      <a href="#" class="added-left"><img src="./assets/img/github.svg" alt="logo" /></a>
+    </header>
+    <aside class="side-menubar" id="side-bar">
+      <nav class="side-bar">
         <ul>
-          <li>
-            <a href="#" class="nav-link"
-              ><span class="icon"><i class="bx bx-cart"></i></span>cart
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link"
-              ><span class="icon"><i class="bx bx-shopping-bag"></i></span>bag
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link-active">
-              <span class="icon"><i class="bx bxs-user-circle"></i> </span>
-              Account
-            </a>
-          </li>
+          <li><a href="#Avatar">Avatar</a></li>
+          <li><a href="#Alert">Alert</a></li>
+          <li><a href="#Badge">Badge</a></li>
+          <li><a href="#custom">custom icons</a></li>
+          <li><a href="#Button">Button</a></li>
+          <li><a href="#Card">Card</a></li>
+          <li><a href="#Input">Input</a></li>
+          <li><a href="#Lists">Lists</a></li>
+          <li><a href="#Navigation">Navigation</a></li>
+          <li><a href="#Modal">Modal</a></li>
+          <li><a href="#Dialog">Dialog</a></li>
+          <li><a href="#Jumbotron">Jumbotron</a></li>
+          <li><a href="#Toast">Toast</a></li>
+          <li><a href="#Text">Text Utilities</a></li>
         </ul>
       </nav>
-      <div class="menu-icon d-block d-sm-none">
-        <input type="checkbox" id="menu-btn" class="menu-check-box" />
-        <label>
+    </aside>
+    <div class="float-btn" id="float-btn">
+      <div class="custom-menu-icon">
+        <input type="checkbox" id="custom-menu-icon" />
+        <label for="custom-menu-icon">
+          <span></span>
           <span></span>
         </label>
       </div>
-    </header>
-
-    <div class="nav-adjust flex-layout ai-center">
-      <span class="avatar-sm-i-basic">
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-sm-i-primary">
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-sm-i-secondary">
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-lg-i-basic">
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-lg-i-primary">
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-lg-i-secondary">
-        <i class="bx bx-user"></i>
-      </span>
     </div>
-    <div style="display: flex; align-items: center">
-      <span class="avatar-sm">
-        <img src="./assets/img/photo1.png" alt="user" />
-      </span>
-      <span class="avatar-lg">
-        <img src="./assets/img/photo2.png" alt="user" />
-      </span>
-      <span class="avatar-lg">
-        <div class="badge"></div>
-        <img src="./assets/img/photo2.png" alt="user" />
-      </span>
-    </div>
-    <div class="m-2">
-      <div class="alert-primary">
-        <span>
-          <i class="bx bxs-badge-check"></i>
-        </span>
-        <div class="alert-content">
-          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
+    <section id="Avatar" class="nav-adjust">
+      <div class="container">
+        <h2 class="heading">Avatar</h2>
+        <p class="sub-heading">
+          small avatar <span>( .avatar-sm-i-color )</span>
+        </p>
+        <div class="align-items">
+          <span class="avatar-sm-i-basic">
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-sm-i-primary">
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-sm-i-secondary">
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-sm-i-abstract">
+            <i class="bx bx-user"></i>
+          </span>
+        </div>
+        <p class="sub-heading">
+          Large avatar <span>( .avatar-lg-i-color )</span>
+        </p>
+        <div class="align-items">
+          <span class="avatar-lg-i-basic">
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-lg-i-abstract">
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-lg-i-primary">
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-lg-i-secondary">
+            <i class="bx bx-user"></i>
+          </span>
+        </div>
+        <p class="sub-heading">
+          Image avatar <span>( .avatar-sm, .avatar-lg )</span>
+        </p>
+        <div class="align-items">
+          <span class="avatar-sm">
+            <img src="./assets/img/photo1.png" alt="user" />
+          </span>
+          <span class="avatar-lg">
+            <img src="./assets/img/photo2.png" alt="user" />
+          </span>
+          <span class="avatar-lg">
+            <div class="badge"></div>
+            <img src="./assets/img/photo2.png" alt="user" />
+          </span>
         </div>
       </div>
-      <div class="alert-secondary">
-        <span>
-          <i class="bx bxs-badge-check"></i>
-        </span>
-        <div class="alert-content">
-          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
-        </div>
-      </div>
-      <div class="alert-danger">
-        <span>
-          <i class="bx bxs-badge-check"></i>
-        </span>
-        <div class="alert-content">
-          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
-        </div>
-      </div>
-      <div class="alert-success outline-primary">
-        <span>
-          <i class="bx bxs-badge-check"></i>
-        </span>
-        <div class="alert-content">
-          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
-        </div>
-        <span class="close">
-          <i class="bx bx-x"></i>
-        </span>
-      </div>
-      <div class="alert-base">
-        <span>
-          <i class="bx bxs-badge-check"></i>
-        </span>
-        <div class="alert-content">
-          <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere</p>
-        </div>
-      </div>
-    </div>
-    <div class="d-flex m-2" style="align-items: center">
-      <span class="avatar-lg-i-secondary">
-        <div class="badge-primary"></div>
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-lg-i-secondary">
-        <div class="badge-success"></div>
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-lg-i-secondary">
-        <div class="badge-danger"></div>
-        <i class="bx bx-user"></i>
-      </span>
-      <span class="avatar-lg-i-secondary">
-        <div class="badge-secondary"></div>
-        <i class="bx bx-user"></i>
-      </span>
-      <div class="badge-rect-success">2</div>
-      <div class="badge-rect-primary">2</div>
-      <div class="badge-rect-secondary">2</div>
-      <div class="badge-rect-danger">2</div>
-    </div>
-    <!-- btns -->
-    <section>
-      <button class="btn-c-success">button</button>
-      <button class="btn-c-primary">button</button>
-      <button class="btn-c-secondary">button</button>
-      <button class="btn-c-base">Button</button>
-      <button class="btn-c-danger">button</button>
-      <button class="btn-success">button</button>
-      <button class="btn-primary-active">button</button>
-      <button class="btn-secondary">button</button>
-      <button class="btn-base">Button</button>
-      <button class="btn-danger">button</button>
-      <button class="btn-outline-success">button</button>
-      <button class="btn-outline-primary">button</button>
-      <button class="btn-outline-secondary">button</button>
-      <button class="btn-outline-base">Button</button>
-      <button class="btn-outline-danger-active">button</button>
-
-      <button class="icon-btn-primary"><i class="bx bx-cart"></i></button>
-      <button class="icon-btn-secondary"><i class="bx bx-cart"></i></button>
-      <button class="icon-btn-base"><i class="bx bx-cart"></i></button>
-      <button class="icon-btn-abstract"><i class="bx bx-cart"></i></button>
-      <button class="btn-disabled">Button</button>
-
-      <button class="btn-success btn-addon m-3">
-        <span><i class="bx bxs-download"></i></span>
-        buy now
-      </button>
     </section>
-    <!-- dialog -->
-    <div class="dialog m-3">
-      <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
-      <p class="dialog-details">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-        beatae iure reiciendis repellat quod ea.
-      </p>
-      <div class="dialog-btns jc-end">
-        <button class="btn-primary">Accept</button>
-        <button class="btn-c-danger-active">Decline</button>
-      </div>
-    </div>
-    <div class="flex-layout ai-center">
-      <div class="snackbar">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-        explicabo?
-        <button class="cta">
-          <i class="bx bx-x"></i>
-        </button>
-      </div>
-      <div class="notify">Lorem ipsum dolor sit amet.</div>
-    </div>
-    <div class="flex-layout ai-center">
-      <div class="grocery-card">
-        <div class="card-thumbnail">
-          <img
-            src="https://media.starquik.com/catalog/product/SQ111813.jpg"
-            alt="product"
-          />
-        </div>
-        <div class="icon">
-          <i class="bx bx-shopping-bag"></i>
-        </div>
-        <div class="card-details">
-          <h3 class="card-header">orange</h3>
-          <span class="badge-rect-danger">10% OFF</span>
-          <p class="card-price">
-            ₹25.00<span class="strike">MRP ₹ 28.00</span>
+    <section id="Alert">
+      <div class="container">
+        <div class="align-items" style="flex-direction: column">
+          <h2 class="heading">Alert</h2>
+          <p class="sub-heading">
+            Alerts without outline <span>( .alert-color )</span>
           </p>
-        </div>
-        <button class="card-cta">Add To Cart</button>
-      </div>
-      <figure class="wishlist-card">
-        <img src="https://via.placeholder.com/200x200" alt="product" />
-        <figcaption>
-          <div class="wishlist-details">
-            <h3 class="wishlist-card-header">orange</h3>
-            <p class="wishlist-card-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-              illum?
-            </p>
-            <div class="wishlist-card-price">
-              <h4>₹23.00</h4>
-              <p class="muted strike">₹25.00</p>
-              <p class="text-danger">10%</p>
+          <div class="alert-primary">
+            <span>
+              <i class="bx bxs-badge-check"></i>
+            </span>
+            <div class="alert-content">
+              <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              </p>
             </div>
           </div>
-          <div class="wrapper">
-            <button class="btn-outline-danger btn-addon">
-              <i class="icon bx bx-trash"></i>
-            </button>
-            <button class="btn-success btn-addon m-3">
-              <span><i class="bx bxs-cart-add"></i></span>
-              Add To Cart
-            </button>
+          <div class="alert-secondary">
+            <span>
+              <i class="bx bxs-badge-check"></i>
+            </span>
+            <div class="alert-content">
+              <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              </p>
+            </div>
           </div>
-        </figcaption>
-      </figure>
-      <div class="text-card w-90 w-sm-40">
-        <div class="card-details">
-          <h3 class="card-header">Lorem ipsum dolor sit.</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, vitae nihil. Ea voluptates blanditiis asperiores itaque sunt quia doloribus at?</p>
+          <div class="alert-danger">
+            <span>
+              <i class="bx bxs-badge-check"></i>
+            </span>
+            <div class="alert-content">
+              <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              </p>
+            </div>
+          </div>
+          <div class="alert-success">
+            <span>
+              <i class="bx bxs-badge-check"></i>
+            </span>
+            <div class="alert-content">
+              <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              </p>
+            </div>
+          </div>
+          <p class="sub-heading">
+            Alerts with outline <span>( .alert-color + .outline-color )</span>
+          </p>
+          <div class="alert-success outline-success">
+            <span>
+              <i class="bx bxs-badge-check"></i>
+            </span>
+            <div class="alert-content">
+              <h3 style="font-weight: 500">Lorem ipsum dolor sit.</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              </p>
+            </div>
+            <span class="close">
+              <i class="bx bx-x"></i>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="jumbotron bgc-success-100">
-      <div class="content">
-        <h3 class="jumbotron-title">Your cart is lighter than a feather</h3>
-        <p class="jumbotron-description">
-          Continue shopping to add items to your cart. Here are some offers to
-          get you started
+    </section>
+    <section id="Badge">
+      <div class="container">
+        <h2 class="heading">badge</h2>
+        <p class="sub-heading">Badge on Avatar <span>( .badge-color )</span></p>
+        <div class="align-items">
+          <span class="avatar-lg-i-secondary">
+            <div class="badge-primary"></div>
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-lg-i-secondary">
+            <div class="badge-success"></div>
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-lg-i-secondary">
+            <div class="badge-danger"></div>
+            <i class="bx bx-user"></i>
+          </span>
+          <span class="avatar-lg-i-secondary">
+            <div class="badge-secondary"></div>
+            <i class="bx bx-user"></i>
+          </span>
+        </div>
+        <p class="sub-heading">
+          Rectangle Badge <span>( .badge-rect-color )</span>
         </p>
-        <a href="#" class="jumbotron-cta btn-outline-success bgc-base-100"
-          >go shopping</a
-        >
-      </div>
-    </div>
-    <form action="#" method="get">
-      <div class="input-livefarm my-5">
-        <input type="text" required />
-        <label for="" data-error="This Field is required"
-          >Enter YT Video URL</label
-        >
-      </div>
-      <div class="input-livefarm my-5">
-        <input type="text" required />
-        <label for="">Enter YT Video URL</label>
-      </div>
-      <button type="submit">Test</button>
-    </form>
-
-    <div class="list-container w-90 w-sm-50">
-      <ul class="list">
-        <li class="list-item">Lorem, ipsum.</li>
-        <li class="list-item">Ducimus, dolorum.</li>
-        <li class="list-item">Iusto, iste.</li>
-        <li class="list-item">Quidem, perspiciatis?</li>
-      </ul>
-    </div>
-    <div class="list-container w-90 w-sm-50">
-      <ul class="list-stacked">
-        <li class="list-item">Lorem, ipsum.</li>
-        <li class="list-item">Ducimus, dolorum.</li>
-        <li class="list-item">Iusto, iste.</li>
-        <li class="list-item">Quidem, perspiciatis?</li>
-      </ul>
-    </div>
-
-    <button onclick="showmodal()">show modal</button>
-    <div class="modal-container" id="modal-body">
-      <div class="modal dialog m-3" id="modal">
-        <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
-        <p class="dialog-details">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          beatae iure reiciendis repellat quod ea.
-        </p>
-        <div class="dialog-btns jc-end">
-          <button class="btn-primary" onclick="closemodal()">Accept</button>
-          <button class="btn-c-danger" onclick="closemodal()">Decline</button>
+        <div class="align-items">
+          <div class="badge-rect-success">2</div>
+          <div class="badge-rect-primary">2</div>
+          <div class="badge-rect-secondary">2</div>
+          <div class="badge-rect-danger">2</div>
         </div>
       </div>
-    </div>
+    </section>
+    <section id="custom"></section>
+    <section id="Button">
+      <div class="container">
+        <h2 class="heading">Buttons</h2>
+        <p class="sub-heading">Link Buttons <span>( .btn-c-color )</span></p>
+        <div class="align-items">
+          <button class="btn-c-success">button</button>
+          <button class="btn-c-primary">button</button>
+          <button class="btn-c-secondary">button</button>
+          <button class="btn-c-base">Button</button>
+          <button class="btn-c-danger">button</button>
+        </div>
+        <p class="sub-heading">Primary Buttons <span>( .btn-color )</span></p>
+        <div class="align-items">
+          <button class="btn-success">button</button>
+          <button class="btn-primary">button</button>
+          <button class="btn-secondary">button</button>
+          <button class="btn-base">Button</button>
+          <button class="btn-danger">button</button>
+        </div>
+        <p class="sub-heading">
+          Outline Buttons <span>( .btn-outline-color )</span>
+        </p>
+        <div class="align-items">
+          <button class="btn-outline-success">button</button>
+          <button class="btn-outline-primary">button</button>
+          <button class="btn-outline-secondary">button</button>
+          <button class="btn-outline-base">Button</button>
+          <button class="btn-outline-danger">button</button>
+        </div>
+        <p class="sub-heading">Icon Buttons <span>( .icon-btn-color )</span></p>
+        <div class="align-items">
+          <button class="icon-btn-primary"><i class="bx bx-cart"></i></button>
+          <button class="icon-btn-secondary"><i class="bx bx-cart"></i></button>
+          <button class="icon-btn-base"><i class="bx bx-cart"></i></button>
+          <button class="icon-btn-abstract"><i class="bx bx-cart"></i></button>
+        </div>
+        <p class="sub-heading">
+          Button with icons <span>( .btn-color + .btn-addon )</span>
+        </p>
+        <div class="align-items">
+          <button class="btn-success btn-addon">
+            <span><i class="bx bxs-download"></i></span>
+            Download
+          </button>
+          <button class="btn-danger btn-addon">
+            <span><i class="bx bxs-info-circle"></i></span>
+            Warning
+          </button>
+        </div>
+        <p class="sub-heading">
+          Disabled Button <span>( .btn-disabled )</span>
+        </p>
+        <button class="btn-disabled">Button</button>
+      </div>
+    </section>
+    <section id="Card">
+      <div class="container">
+        <h2 class="heading">Cards</h2>
+        <p class="sub-heading">Card With Image</p>
+        <div class="grocery-card">
+          <div class="card-thumbnail">
+            <img
+              src="https://media.starquik.com/catalog/product/SQ111813.jpg"
+              alt="product"
+            />
+          </div>
+          <div class="icon">
+            <i class="bx bx-shopping-bag"></i>
+          </div>
+          <div class="card-details">
+            <h3 class="card-header">orange</h3>
+            <span class="badge-rect-danger">10% OFF</span>
+            <p class="card-price">
+              ₹25.00<span class="strike">MRP ₹ 28.00</span>
+            </p>
+          </div>
+          <button class="card-cta">Add To Cart</button>
+        </div>
+        <p class="sub-heading">Card With Dismis button</p>
+        <figure class="wishlist-card">
+          <img src="https://via.placeholder.com/200x200" alt="product" />
+          <figcaption>
+            <div class="wishlist-details">
+              <h3 class="wishlist-card-header">orange</h3>
+              <p class="wishlist-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                illum?
+              </p>
+              <div class="wishlist-card-price">
+                <h4>₹23.00</h4>
+                <p class="muted strike">₹25.00</p>
+                <p class="text-danger">10%</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="btn-outline-danger btn-addon">
+                <i class="icon bx bx-trash"></i>
+              </button>
+              <button class="btn-success btn-addon m-3">
+                <span><i class="bx bxs-cart-add"></i></span>
+                Add To Cart
+              </button>
+            </div>
+          </figcaption>
+        </figure>
+        <p class="sub-heading">Card With Text</p>
+        <div class="text-card w-90 w-sm-40">
+          <div class="card-details">
+            <h3 class="card-header">Lorem ipsum dolor sit.</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
+              vitae nihil. Ea voluptates blanditiis asperiores itaque sunt quia
+              doloribus at?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Input">
+      <div class="container">
+        <h2 class="heading">Inputs</h2>
+        <p class="sub-heading">Primary Input</p>
+        <div class="input-livefarm mb-5">
+          <input type="text" required />
+          <label for="" data-error="This Field is required"
+            >Enter YT Video URL</label
+          >
+        </div>
+        <p class="sub-heading">Disabled Input</p>
+        <div class="input-livefarm-disabled mb-5">
+          <input type="text" required />
+          <label for="" data-error="This Field is required"
+            >Enter YT Video URL</label
+          >
+        </div>
+        <p class="sub-heading">Input with icon</p>
+        <div class="input-addon-success" tabindex="1">
+          <span class="icon"><i class="bx bx-search-alt-2"></i></span>
+          <input type="search" placeholder="Search Products, Brands & More" />
+        </div>
+      </div>
+    </section>
+    <section id="Lists">
+      <div class="container">
+        <h2 class="heading">Lists</h2>
+        <p class="sub-heading">Simple List</p>
+        <div class="list-container w-90 w-sm-50">
+          <ul class="list">
+            <li class="list-item">Lorem, ipsum.</li>
+            <li class="list-item">Ducimus, dolorum.</li>
+            <li class="list-item">Iusto, iste.</li>
+            <li class="list-item">Quidem, perspiciatis?</li>
+          </ul>
+        </div>
+        <p class="sub-heading">Striped List</p>
+        <div class="list-container w-90 w-sm-50">
+          <ul class="list-stacked">
+            <li class="list-item">Lorem, ipsum.</li>
+            <li class="list-item">Ducimus, dolorum.</li>
+            <li class="list-item">Iusto, iste.</li>
+            <li class="list-item">Quidem, perspiciatis?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="Navigation">
+      <div class="container">
+        <h2 class="heading">Navbar</h2>
+        <header class="side-menu my-2" style="z-index: -1">
+          <a href="#" class="logo-img"
+            ><img
+              src="https://api-farmers-grocery.herokuapp.com/images/logo-trans.png"
+              alt="logo"
+            />Farmers Grocery</a
+          >
+          <div class="input-addon-success d-none d-sm-block" tabindex="1">
+            <span class="icon"><i class="bx bx-search-alt-2"></i></span>
+            <input type="search" placeholder="Search Products, Brands & More" />
+          </div>
+          <nav id="menu" style="height: auto">
+            <ul>
+              <li>
+                <a href="#" class="nav-link"
+                  ><span class="icon"><i class="bx bx-cart"></i></span>cart
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link"
+                  ><span class="icon"><i class="bx bx-shopping-bag"></i></span
+                  >bag
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link-active">
+                  <span class="icon"><i class="bx bxs-user-circle"></i> </span>
+                  Account
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-icon d-block d-sm-none">
+            <input type="checkbox" id="menu-btn" class="menu-check-box" />
+            <label>
+              <span></span>
+            </label>
+          </div>
+        </header>
+      </div>
+    </section>
+    <section id="Dialog">
+      <div class="container">
+        <h2 class="heading">Navbar</h2>
+        <div class="dialog my-4">
+          <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
+          <p class="dialog-details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            beatae iure reiciendis repellat quod ea.
+          </p>
+          <div class="dialog-btns jc-end">
+            <button class="btn-primary">Accept</button>
+            <button class="btn-c-danger">Decline</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Modal">
+      <div class="container">
+        <h2 class="heading">Modal</h2>
+        <button onclick="showmodal()" class="btn-primary my-3">
+          show modal
+        </button>
+        <div class="modal-container" id="modal-body">
+          <div class="modal dialog m-3" id="modal">
+            <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
+            <p class="dialog-details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate beatae iure reiciendis repellat quod ea.
+            </p>
+            <div class="dialog-btns jc-end">
+              <button class="btn-primary" onclick="closemodal()">Accept</button>
+              <button class="btn-c-danger" onclick="closemodal()">
+                Decline
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Toast">
+      <div class="container">
+        <h2 class="heading">Toast</h2>
+        <p class="sub-heading">Snackbar</p>
+        <div class="snackbar">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          explicabo?
+          <button class="cta">
+            <i class="bx bx-x"></i>
+          </button>
+        </div>
+        <p class="sub-heading">Notify</p>
+        <div class="notify">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </section>
+    <section id="Jumbotron">
+      <div class="container">
+        <h2 class="heading">Jumbotron</h2>
+        <div class="jumbotron bgc-success-100" style="margin:.5rem 0">
+          <div class="content">
+            <h3 class="jumbotron-title">Your cart is lighter than a feather</h3>
+            <p class="jumbotron-description">
+              Continue shopping to add items to your cart. Here are some offers to
+              get you started
+            </p>
+            <a href="#" class="jumbotron-cta btn-outline-success bgc-base-100"
+              >go shopping</a
+            >
+          </div>
+        </div>
+    </section>
+
+    <section id="Text">
+      <div class="container">
+        <h2 class="heading">Text Utilities</h2>
+        <p class="sub-heading">Text <span>( .fsz-size )</span></p>
+        <h4 class="fsz-1">Lorem</h4>
+        <p class="sub-heading">Text Center <span>( .text-center )</span></p>
+        <h4 class="text-center">lorem</h4>
+      </div>
+    </section>
+
     <script>
+      const floatBtn = document.getElementById("float-btn");
+      const customIcon = document.getElementById("custom-menu-icon");
+      const sideMenuBar = document.getElementById("side-bar");
+      floatBtn.addEventListener("change", open);
+      function open() {
+        if (customIcon.checked) {
+          sideMenuBar.style.visibility = "visible";
+          sideMenuBar.style.transform = "translateY(0%)";
+        } else {
+          sideMenuBar.style.transition = "all .5s ease";
+          sideMenuBar.style.visibility = "hidden";
+          sideMenuBar.style.transform = "translateY(10%)";
+        }
+      }
       const menuBtn = document.getElementById("menu-btn");
       const menu = document.getElementById("menu");
       const modalBody = document.getElementById("modal-body");

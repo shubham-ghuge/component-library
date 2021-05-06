@@ -770,6 +770,10 @@ a:hover {
   text-align: left;
 }
 
+.text-capitalize {
+  text-transform: capitalize;
+}
+
 .text-primary {
   color: var(--c-primary-200);
 }
@@ -903,6 +907,19 @@ a:hover {
   border-radius: 50%;
 }
 .avatar-lg-i-secondary i {
+  font-size: var(--fsz-3);
+  vertical-align: middle;
+}
+
+.avatar-lg-i-abstract {
+  position: relative;
+  background-color: var(--icon-abstract-200);
+  color: var(--icon-abstract-100);
+  box-sizing: border-box;
+  padding: var(--p-4);
+  border-radius: 50%;
+}
+.avatar-lg-i-abstract i {
   font-size: var(--fsz-3);
   vertical-align: middle;
 }
@@ -2330,6 +2347,7 @@ a:hover {
   align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(20, 20, 20, 0.774);
