@@ -433,6 +433,13 @@
     }
   }
 }
+.text-card{
+  display: flex;
+  padding: var(--p-2);
+  border: 1px solid #ccc;
+  border-radius: var(--br-2);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 /* icons */
 
 .menu-icon {
@@ -445,7 +452,7 @@
     height: 30px;
     width: 30px;
     position: absolute;
-    top: -.8rem;
+    top: -0.8rem;
     left: 0;
     cursor: pointer;
     opacity: 0;
@@ -796,7 +803,7 @@
   box-sizing: border-box;
   position: fixed;
   top: 0%;
-  z-index: var(--z-1);
+  z-index: var(--z-4);
   width: 100vw;
   nav {
     position: absolute;
@@ -943,6 +950,16 @@
     font-size: 1rem;
     line-height: 22px;
     color: rgb(82, 89, 102);
+    &::after {
+      content: attr(data-error);
+      color: var(--c-danger-200);
+      position: absolute;
+      visibility: hidden;
+      left: 1%;
+      font-weight: 500;
+      bottom: -1.8rem;
+      font-size: 0.8rem;
+    }
   }
   &:focus-within {
     label {
@@ -956,13 +973,8 @@
     line-height: 1.4;
     font-weight: 400;
   }
-  &::after{
-    color: #fff;
-    content: attr(data-error);
-    opacity: 0;
-  }
-  &input:valid ~ &::after{
-    opacity: 1;
+  input:invalid ~ label::after {
+    visibility: visible;
   }
 }
 .input-livefarm-disabled {
@@ -1027,5 +1039,53 @@
       font-size: var(--fsz-1);
       padding: var(--p-6);
     }
+  }
+}
+
+.list-container {
+  box-sizing: border-box;
+  display: block;
+  border-radius: var(--br-2);
+  margin: var(--p-4);
+  border: 1px solid #ccc;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: var(--p-2) 0;
+  &-item {
+    padding: var(--p-2) var(--p-4);
+  }
+  &-item:not(:nth-last-child(1)) {
+    border-bottom: 1px solid #ccc;
+  }
+}
+.list-stacked {
+  @extend .list;
+  padding: 0;
+  .list-item:nth-child(even) {
+    color: var(--c-grey);
+    background-color: var(--c-base-300);
+  }
+  .list-item:nth-last-child(1) {
+    border-radius: 0 0 var(--br-2) var(--br-2);
+  }
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.774);
+  transition: all 0.3s ease;
+  visibility: hidden;
+  .modal {
+    transition: all 0.3s ease;
+    transition-delay: 0.3s;
+    transform: scale(0);
   }
 }

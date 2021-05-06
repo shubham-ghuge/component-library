@@ -21,6 +21,13 @@
     />
   </head>
   <body>
+    <style>
+      @media all and (max-width: 600px) {
+        #menu {
+          display: none;
+        }
+      }
+    </style>
     <header class="side-menu">
       <a href="#" class="logo-img"
         ><img
@@ -32,7 +39,7 @@
         <span class="icon"><i class="bx bx-search-alt-2"></i></span>
         <input type="search" placeholder="Search Products, Brands & More" />
       </div>
-      <nav>
+      <nav id="menu">
         <ul>
           <li>
             <a href="#" class="nav-link"
@@ -53,7 +60,7 @@
         </ul>
       </nav>
       <div class="menu-icon d-block d-sm-none">
-        <input type="checkbox" id="menu" class="menu-check-box" />
+        <input type="checkbox" id="menu-btn" class="menu-check-box" />
         <label>
           <span></span>
         </label>
@@ -261,6 +268,12 @@
           </div>
         </figcaption>
       </figure>
+      <div class="text-card w-90 w-sm-40">
+        <div class="card-details">
+          <h3 class="card-header">Lorem ipsum dolor sit.</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, vitae nihil. Ea voluptates blanditiis asperiores itaque sunt quia doloribus at?</p>
+        </div>
+      </div>
     </div>
 
     <div class="jumbotron bgc-success-100">
@@ -275,11 +288,71 @@
         >
       </div>
     </div>
+    <form action="#" method="get">
+      <div class="input-livefarm my-5">
+        <input type="text" required />
+        <label for="" data-error="This Field is required"
+          >Enter YT Video URL</label
+        >
+      </div>
+      <div class="input-livefarm my-5">
+        <input type="text" required />
+        <label for="">Enter YT Video URL</label>
+      </div>
+      <button type="submit">Test</button>
+    </form>
 
-    <div class="input-livefarm my-5" data-error="This Field is required">
-      <input type="text" required />
-      <label for="">Enter YT Video URL</label>
+    <div class="list-container w-90 w-sm-50">
+      <ul class="list">
+        <li class="list-item">Lorem, ipsum.</li>
+        <li class="list-item">Ducimus, dolorum.</li>
+        <li class="list-item">Iusto, iste.</li>
+        <li class="list-item">Quidem, perspiciatis?</li>
+      </ul>
     </div>
-    
+    <div class="list-container w-90 w-sm-50">
+      <ul class="list-stacked">
+        <li class="list-item">Lorem, ipsum.</li>
+        <li class="list-item">Ducimus, dolorum.</li>
+        <li class="list-item">Iusto, iste.</li>
+        <li class="list-item">Quidem, perspiciatis?</li>
+      </ul>
+    </div>
+
+    <button onclick="showmodal()">show modal</button>
+    <div class="modal-container" id="modal-body">
+      <div class="modal dialog m-3" id="modal">
+        <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
+        <p class="dialog-details">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          beatae iure reiciendis repellat quod ea.
+        </p>
+        <div class="dialog-btns jc-end">
+          <button class="btn-primary" onclick="closemodal()">Accept</button>
+          <button class="btn-c-danger" onclick="closemodal()">Decline</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      const modalBody = document.getElementById("modal-body");
+      const modal = document.getElementById("modal");
+
+      menuBtn.addEventListener("click", () => {
+        if (menu.style.display === "none" || menu.style.display === "") {
+          return (menu.style.display = "block");
+        }
+        return (menu.style.display = "none");
+      });
+      function showmodal() {
+        modalBody.style.visibility = "visible";
+        modal.style.transform = "scale(1)";
+      }
+      function closemodal() {
+        modalBody.style.visibility = "hidden";
+        modal.style.transform = "scale(0)";
+      }
+    </script>
   </body>
 </html>

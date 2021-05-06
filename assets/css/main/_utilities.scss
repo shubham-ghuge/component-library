@@ -40,6 +40,11 @@
   .w-#{$i}0 {
     width: #{$i}0vw;
   }
+  @include for-large-screen() {
+    .w-sm-#{$i}0 {
+      width: #{$i}0vw!important;
+    }
+  }
 }
 .jc-center {
   justify-content: center;
