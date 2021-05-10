@@ -179,6 +179,11 @@ header img {
   width: 30vw;
 }
 
+.snackbar {
+  transform: translateX(200%);
+  animation: none !important;
+}
+
 @media all and (max-width: 600px) {
   #menu {
     display: none;

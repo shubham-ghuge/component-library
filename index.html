@@ -427,7 +427,7 @@
     </section>
     <section id="Dialog">
       <div class="container">
-        <h2 class="heading">Navbar</h2>
+        <h2 class="heading">Dialog</h2>
         <div class="dialog my-4">
           <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
           <p class="dialog-details">
@@ -444,7 +444,7 @@
     <section id="Modal">
       <div class="container">
         <h2 class="heading">Modal</h2>
-        <button onclick="showmodal()" class="btn-primary my-3">
+        <button onclick="showmodal()" class="text-capitalize btn-primary my-3">
           show modal
         </button>
         <div class="modal-container" id="modal-body">
@@ -468,10 +468,13 @@
       <div class="container">
         <h2 class="heading">Toast</h2>
         <p class="sub-heading">Snackbar</p>
-        <div class="snackbar">
+        <button onclick="showToast()" class="text-capitalize btn-primary my-3">
+          show Toast
+        </button>
+        <div class="snackbar" id="toast">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
           explicabo?
-          <button class="cta">
+          <button class="cta" onclick="closeToast()">
             <i class="bx bx-x"></i>
           </button>
         </div>
@@ -510,6 +513,8 @@
       const floatBtn = document.getElementById("float-btn");
       const customIcon = document.getElementById("custom-menu-icon");
       const sideMenuBar = document.getElementById("side-bar");
+      const toast = document.getElementById("toast");
+
       floatBtn.addEventListener("change", open);
       function open() {
         if (customIcon.checked) {
@@ -539,6 +544,12 @@
       function closemodal() {
         modalBody.style.visibility = "hidden";
         modal.style.transform = "scale(0)";
+      }
+      function showToast(){
+        toast.style.transform="translateX(0%)";
+      }
+      function closeToast(){
+        toast.style.transform="translateX(200%)";
       }
     </script>
   </body>
