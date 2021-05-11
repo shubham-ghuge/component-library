@@ -448,7 +448,7 @@
           show modal
         </button>
         <div class="modal-container" id="modal-body">
-          <div class="modal dialog m-3" id="modal">
+          <div class="modal dialog" id="modal">
             <h5 class="dialog-heading">Lorem ipsum dolor sit.</h5>
             <p class="dialog-details">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -538,15 +538,12 @@
         return (menu.style.display = "none");
       });
       function showmodal() {
-        modalBody.style.opacity = "1";
-        modal.style.transform = "scale(1)";
-        modal.style.pointerEvents = "visible";
-
+        modalBody.classList.add("show");
+        modal.classList.add("show");
       }
       function closemodal() {
-        modalBody.style.opacity = "0";
-        modal.style.transform = "scale(0)";
-        modal.style.pointerEvents = "none";
+        modalBody.classList.remove("show");
+        modal.classList.remove("show");
       }
       function showToast(){
         toast.style.transform="translateX(0%)";

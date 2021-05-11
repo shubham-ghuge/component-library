@@ -2372,12 +2372,14 @@ a:hover {
   transition-delay: 0.3s;
   transform: scale(0);
 }
-.modal-container + .show {
-  pointer-events: visible;
-  opacity: 1;
+
+.modal-container.show {
+  pointer-events: visible !important;
+  opacity: 1 !important;
 }
-.modal-container .modal + .show {
-  transform: scale(1);
+
+.modal.dialog.show {
+  transform: scale(1) !important;
 }
 
 /*# sourceMappingURL=cssStack.css.map */
