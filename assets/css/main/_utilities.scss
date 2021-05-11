@@ -42,7 +42,7 @@
   }
   @include for-large-screen() {
     .w-sm-#{$i}0 {
-      width: #{$i}0vw!important;
+      width: #{$i}0vw !important;
     }
   }
 }
@@ -73,7 +73,7 @@
 .text-left {
   text-align: left;
 }
-.text-capitalize{
+.text-capitalize {
   text-transform: capitalize;
 }
 @each $color-type, $shades in $colors {
@@ -102,4 +102,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.nav-adjust {
+  margin: 20px 0 0;
+  @include for-large-screen() {
+    margin: 70px 0 0;
+  }
 }

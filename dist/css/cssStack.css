@@ -819,6 +819,15 @@ a:hover {
   flex-wrap: wrap;
 }
 
+.nav-adjust {
+  margin: 20px 0 0;
+}
+@media all and (min-width: 600px) {
+  .nav-adjust {
+    margin: 70px 0 0;
+  }
+}
+
 .avatar-sm-i-basic {
   position: relative;
   background-color: var(--icon-base-200);
@@ -1555,7 +1564,7 @@ a:hover {
   position: fixed;
   bottom: 5%;
   right: 0%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   background-color: #323232;
   color: var(--c-base-100);
   width: 90vw;
@@ -1563,7 +1572,7 @@ a:hover {
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  animation: slide-right 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(200%);
 }
 @media all and (min-width: 600px) {
   .snackbar {
@@ -1579,13 +1588,9 @@ a:hover {
 .snackbar .cta i {
   font-size: var(--fsz-1);
 }
-@keyframes slide-right {
-  0% {
-    transform: translate(200%);
-  }
-  100% {
-    transform: translate(-10%);
-  }
+
+.snackbar.show {
+  transform: translateX(0%);
 }
 
 /* grocery card */
@@ -2188,15 +2193,6 @@ a:hover {
   width: 90vw;
   margin: 0.4rem auto;
   z-index: var(--z-1);
-}
-
-.nav-adjust {
-  margin: 20px 0 0;
-}
-@media all and (min-width: 600px) {
-  .nav-adjust {
-    margin: 70px 0 0;
-  }
 }
 
 .input-livefarm, .input-livefarm-disabled {

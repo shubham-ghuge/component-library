@@ -313,7 +313,7 @@
   position: fixed;
   bottom: 5%;
   right: 0%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   background-color: #323232;
   color: var(--c-base-100);
   width: 90vw;
@@ -321,7 +321,7 @@
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  animation: slide-right 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(200%);
   @include for-large-screen {
     max-width: 50vw;
     padding: var(--p-5) var(--p-7);
@@ -334,14 +334,9 @@
       font-size: var(--fsz-1);
     }
   }
-  @keyframes slide-right {
-    0% {
-      transform: translate(200%);
-    }
-    100% {
-      transform: translate(-10%);
-    }
-  }
+}
+.snackbar.show{
+  transform: translateX(0%);
 }
 /* grocery card */
 
@@ -931,12 +926,7 @@
   margin: 0.4rem auto;
   z-index: var(--z-1);
 }
-.nav-adjust {
-  margin: 20px 0 0;
-  @include for-large-screen() {
-    margin: 70px 0 0;
-  }
-}
+
 // input component
 
 .input-livefarm {
