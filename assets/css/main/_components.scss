@@ -321,7 +321,7 @@
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  animation: slide-right .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: slide-right 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   @include for-large-screen {
     max-width: 50vw;
     padding: var(--p-5) var(--p-7);
@@ -335,10 +335,10 @@
     }
   }
   @keyframes slide-right {
-    0%{
+    0% {
       transform: translate(200%);
     }
-    100%{
+    100% {
       transform: translate(-10%);
     }
   }
@@ -1100,10 +1100,18 @@
   width: 100%;
   background-color: rgba(20, 20, 20, 0.774);
   transition: all 0.3s ease;
-  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   .modal {
     transition: all 0.3s ease;
     transition-delay: 0.3s;
     transform: scale(0);
+  }
+  & + .show {
+    pointer-events: visible;
+    opacity: 1;
+  }
+  .modal + .show {
+    transform: scale(1);
   }
 }

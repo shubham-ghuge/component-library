@@ -2364,12 +2364,20 @@ a:hover {
   width: 100%;
   background-color: rgba(20, 20, 20, 0.774);
   transition: all 0.3s ease;
-  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 .modal-container .modal {
   transition: all 0.3s ease;
   transition-delay: 0.3s;
   transform: scale(0);
+}
+.modal-container + .show {
+  pointer-events: visible;
+  opacity: 1;
+}
+.modal-container .modal + .show {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=cssStack.css.map */

@@ -538,12 +538,15 @@
         return (menu.style.display = "none");
       });
       function showmodal() {
-        modalBody.style.visibility = "visible";
+        modalBody.style.opacity = "1";
         modal.style.transform = "scale(1)";
+        modal.style.pointerEvents = "visible";
+
       }
       function closemodal() {
-        modalBody.style.visibility = "hidden";
+        modalBody.style.opacity = "0";
         modal.style.transform = "scale(0)";
+        modal.style.pointerEvents = "none";
       }
       function showToast(){
         toast.style.transform="translateX(0%)";
