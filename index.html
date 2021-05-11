@@ -479,7 +479,8 @@
           </button>
         </div>
         <p class="sub-heading">Notify</p>
-        <div class="notify">Lorem ipsum dolor sit amet.</div>
+        <button class="btn-primary" onclick="showNotify()">Show Notify</button>
+        <div class="notify" id="notify">Lorem ipsum dolor sit amet.</div>
       </div>
     </section>
     <section id="Jumbotron">
@@ -514,6 +515,7 @@
       const customIcon = document.getElementById("custom-menu-icon");
       const sideMenuBar = document.getElementById("side-bar");
       const toast = document.getElementById("toast");
+      const notify = document.getElementById("notify");
 
       floatBtn.addEventListener("change", open);
 
@@ -553,6 +555,13 @@
       }
       function closeToast(){
         toast.classList.remove("show");
+      }
+      function showNotify(){
+        if(notify.classList.contains("show")){
+          notify.classList.remove("show") 
+        }else{
+          notify.classList.add("show") 
+        }
       }
     </script>
   </body>

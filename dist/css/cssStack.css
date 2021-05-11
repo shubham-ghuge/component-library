@@ -2262,13 +2262,30 @@ a:hover {
 }
 
 .notify {
-  display: inline-block;
-  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  text-align: center;
   font-size: 0.9rem;
   border-radius: var(--p-1);
   padding: var(--p-2) var(--p-4);
   color: var(--c-base-100);
   background-color: #323232;
+  opacity: 0;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.notify.show {
+  animation: blink 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .jumbotron {
