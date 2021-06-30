@@ -11,7 +11,8 @@
     color: $c;
     padding: var(--p-2);
     border-radius: 50%;
-    i {
+    i,
+    .icon {
       font-size: var(--fsz-2);
       vertical-align: middle;
     }
@@ -25,7 +26,8 @@
     box-sizing: border-box;
     padding: var(--p-4);
     border-radius: 50%;
-    i {
+    i,
+    .icon {
       font-size: var(--fsz-3);
       vertical-align: middle;
     }
@@ -1120,4 +1122,45 @@
 }
 .modal.dialog.show {
   transform: scale(1) !important;
+}
+
+.icon-input {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #adadb4;
+  border-radius: var(--br-1);
+  position: relative;
+  .icon {
+    margin: auto var(--p-2);
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+  input {
+    font-family: "Inter";
+    padding: var(--p-3) 0;
+    flex-basis: 1;
+    border: 0;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &:focus-within {
+    background-color: #fff;
+    outline: 2px solid #2320cc;
+    .icon {
+      color: #2320cc;
+    }
+  }
+  &:hover {
+    background-color: #e5e5e5;
+    input {
+      background-color: #e5e5e5;
+    }
+  }
 }

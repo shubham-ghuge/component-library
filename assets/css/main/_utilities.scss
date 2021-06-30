@@ -1,7 +1,13 @@
 @use '../abstracts' as *;
 @use '../abstracts/colors' as *;
+.link {
+  color: var(--c-link);
+}
 .d-flex {
   display: flex;
+}
+.d-ib {
+  display: inline-block;
 }
 .d-block {
   display: block !important;
@@ -22,8 +28,22 @@
     text-decoration: none;
   }
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+  .logo {
+    height: 60px;
+  }
+  span {
+    margin-left: var(--p-2);
+    font-size: var(--fsz-1);
+  }
+}
 .logo {
   height: 80px;
+}
+.logo-img {
+  height: 60px;
 }
 .close {
   cursor: pointer;
@@ -46,11 +66,14 @@
     }
   }
 }
+.jc-start {
+  justify-content: flex-start;
+}
 .jc-center {
   justify-content: center;
 }
 .jc-end {
-  justify-content: end;
+  justify-content: flex-end;
 }
 .jc-space-between {
   justify-content: space-between;
@@ -91,7 +114,10 @@
   font-size: 0.8rem;
   margin-left: 0.5rem;
 }
-
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 .flex-layout {
   display: flex;
   flex-wrap: wrap;

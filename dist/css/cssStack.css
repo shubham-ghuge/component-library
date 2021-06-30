@@ -79,10 +79,10 @@ a:hover {
   --c-danger-100: #f6cbcd;
   --c-danger-200: #ce2224;
   --c-danger-300: #9a191b;
-  --c-black:hsl(240, 3%, 12%);
-  --c-link:hsl(210, 100%, 40%);
-  --c-grey-apple:hsl(240, 11%, 96%);
-  --c-grey:hsl(0, 0%, 95%);
+  --c-black: hsl(240, 3%, 12%);
+  --c-link: hsl(210, 100%, 40%);
+  --c-grey-apple: hsl(240, 11%, 96%);
+  --c-grey: hsl(0, 0%, 95%);
   --icon-primary-100: #17eed4;
   --icon-primary-200: #113733;
   --icon-primary-300: #3d514f;
@@ -149,6 +149,34 @@ a:hover {
   z-index: var(--z-7);
 }
 
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
 .p-0 {
   padding: var(--p-0);
 }
@@ -163,6 +191,14 @@ a:hover {
 
 .py-0 {
   padding-top: var(--p-0);
+}
+
+.pr-0 {
+  padding-right: var(--p-0);
+}
+
+.pl-0 {
+  padding-left: var(--p-0);
 }
 
 .px-0 {
@@ -185,6 +221,14 @@ a:hover {
   padding-top: var(--p-1);
 }
 
+.pr-1 {
+  padding-right: var(--p-1);
+}
+
+.pl-1 {
+  padding-left: var(--p-1);
+}
+
 .px-1 {
   padding: 0 var(--p-1);
 }
@@ -203,6 +247,14 @@ a:hover {
 
 .py-2 {
   padding-top: var(--p-2);
+}
+
+.pr-2 {
+  padding-right: var(--p-2);
+}
+
+.pl-2 {
+  padding-left: var(--p-2);
 }
 
 .px-2 {
@@ -225,6 +277,14 @@ a:hover {
   padding-top: var(--p-3);
 }
 
+.pr-3 {
+  padding-right: var(--p-3);
+}
+
+.pl-3 {
+  padding-left: var(--p-3);
+}
+
 .px-3 {
   padding: 0 var(--p-3);
 }
@@ -243,6 +303,14 @@ a:hover {
 
 .py-4 {
   padding-top: var(--p-4);
+}
+
+.pr-4 {
+  padding-right: var(--p-4);
+}
+
+.pl-4 {
+  padding-left: var(--p-4);
 }
 
 .px-4 {
@@ -265,6 +333,14 @@ a:hover {
   padding-top: var(--p-5);
 }
 
+.pr-5 {
+  padding-right: var(--p-5);
+}
+
+.pl-5 {
+  padding-left: var(--p-5);
+}
+
 .px-5 {
   padding: 0 var(--p-5);
 }
@@ -283,6 +359,14 @@ a:hover {
 
 .py-6 {
   padding-top: var(--p-6);
+}
+
+.pr-6 {
+  padding-right: var(--p-6);
+}
+
+.pl-6 {
+  padding-left: var(--p-6);
 }
 
 .px-6 {
@@ -305,6 +389,14 @@ a:hover {
   padding-top: var(--p-7);
 }
 
+.pr-7 {
+  padding-right: var(--p-7);
+}
+
+.pl-7 {
+  padding-left: var(--p-7);
+}
+
 .px-7 {
   padding: 0 var(--p-7);
 }
@@ -317,16 +409,26 @@ a:hover {
   margin-top: var(--p-0);
 }
 
+.ml-0 {
+  margin-left: var(--p-0);
+}
+
+.mr-0 {
+  margin-right: var(--p-0);
+}
+
 .mb-0 {
   margin-bottom: var(--p-0);
 }
 
-.my-0 {
-  margin: var(--p-0) 0;
+.mx-0 {
+  margin-left: var(--p-0);
+  margin-right: var(--p-0);
 }
 
-.mx-0 {
-  margin: 0 var(--p-0);
+.my-0 {
+  margin-top: var(--p-0);
+  margin-bottom: var(--p-0);
 }
 
 .m-1 {
@@ -337,16 +439,26 @@ a:hover {
   margin-top: var(--p-1);
 }
 
+.ml-1 {
+  margin-left: var(--p-1);
+}
+
+.mr-1 {
+  margin-right: var(--p-1);
+}
+
 .mb-1 {
   margin-bottom: var(--p-1);
 }
 
-.my-1 {
-  margin: var(--p-1) 0;
+.mx-1 {
+  margin-left: var(--p-1);
+  margin-right: var(--p-1);
 }
 
-.mx-1 {
-  margin: 0 var(--p-1);
+.my-1 {
+  margin-top: var(--p-1);
+  margin-bottom: var(--p-1);
 }
 
 .m-2 {
@@ -357,16 +469,26 @@ a:hover {
   margin-top: var(--p-2);
 }
 
+.ml-2 {
+  margin-left: var(--p-2);
+}
+
+.mr-2 {
+  margin-right: var(--p-2);
+}
+
 .mb-2 {
   margin-bottom: var(--p-2);
 }
 
-.my-2 {
-  margin: var(--p-2) 0;
+.mx-2 {
+  margin-left: var(--p-2);
+  margin-right: var(--p-2);
 }
 
-.mx-2 {
-  margin: 0 var(--p-2);
+.my-2 {
+  margin-top: var(--p-2);
+  margin-bottom: var(--p-2);
 }
 
 .m-3 {
@@ -377,16 +499,26 @@ a:hover {
   margin-top: var(--p-3);
 }
 
+.ml-3 {
+  margin-left: var(--p-3);
+}
+
+.mr-3 {
+  margin-right: var(--p-3);
+}
+
 .mb-3 {
   margin-bottom: var(--p-3);
 }
 
-.my-3 {
-  margin: var(--p-3) 0;
+.mx-3 {
+  margin-left: var(--p-3);
+  margin-right: var(--p-3);
 }
 
-.mx-3 {
-  margin: 0 var(--p-3);
+.my-3 {
+  margin-top: var(--p-3);
+  margin-bottom: var(--p-3);
 }
 
 .m-4 {
@@ -397,16 +529,26 @@ a:hover {
   margin-top: var(--p-4);
 }
 
+.ml-4 {
+  margin-left: var(--p-4);
+}
+
+.mr-4 {
+  margin-right: var(--p-4);
+}
+
 .mb-4 {
   margin-bottom: var(--p-4);
 }
 
-.my-4 {
-  margin: var(--p-4) 0;
+.mx-4 {
+  margin-left: var(--p-4);
+  margin-right: var(--p-4);
 }
 
-.mx-4 {
-  margin: 0 var(--p-4);
+.my-4 {
+  margin-top: var(--p-4);
+  margin-bottom: var(--p-4);
 }
 
 .m-5 {
@@ -417,16 +559,26 @@ a:hover {
   margin-top: var(--p-5);
 }
 
+.ml-5 {
+  margin-left: var(--p-5);
+}
+
+.mr-5 {
+  margin-right: var(--p-5);
+}
+
 .mb-5 {
   margin-bottom: var(--p-5);
 }
 
-.my-5 {
-  margin: var(--p-5) 0;
+.mx-5 {
+  margin-left: var(--p-5);
+  margin-right: var(--p-5);
 }
 
-.mx-5 {
-  margin: 0 var(--p-5);
+.my-5 {
+  margin-top: var(--p-5);
+  margin-bottom: var(--p-5);
 }
 
 .m-6 {
@@ -437,16 +589,26 @@ a:hover {
   margin-top: var(--p-6);
 }
 
+.ml-6 {
+  margin-left: var(--p-6);
+}
+
+.mr-6 {
+  margin-right: var(--p-6);
+}
+
 .mb-6 {
   margin-bottom: var(--p-6);
 }
 
-.my-6 {
-  margin: var(--p-6) 0;
+.mx-6 {
+  margin-left: var(--p-6);
+  margin-right: var(--p-6);
 }
 
-.mx-6 {
-  margin: 0 var(--p-6);
+.my-6 {
+  margin-top: var(--p-6);
+  margin-bottom: var(--p-6);
 }
 
 .m-7 {
@@ -457,16 +619,36 @@ a:hover {
   margin-top: var(--p-7);
 }
 
+.ml-7 {
+  margin-left: var(--p-7);
+}
+
+.mr-7 {
+  margin-right: var(--p-7);
+}
+
 .mb-7 {
   margin-bottom: var(--p-7);
 }
 
-.my-7 {
-  margin: var(--p-7) 0;
+.mx-7 {
+  margin-left: var(--p-7);
+  margin-right: var(--p-7);
 }
 
-.mx-7 {
-  margin: 0 var(--p-7);
+.my-7 {
+  margin-top: var(--p-7);
+  margin-bottom: var(--p-7);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .bdrs-0 {
@@ -581,8 +763,16 @@ a:hover {
   background-color: var(--c-danger-300) !important;
 }
 
+.link {
+  color: var(--c-link);
+}
+
 .d-flex {
   display: flex;
+}
+
+.d-ib {
+  display: inline-block;
 }
 
 .d-block {
@@ -606,8 +796,24 @@ a:hover {
   text-decoration: none;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container .logo {
+  height: 60px;
+}
+.logo-container span {
+  margin-left: var(--p-2);
+  font-size: var(--fsz-1);
+}
+
 .logo {
   height: 80px;
+}
+
+.logo-img {
+  height: 60px;
 }
 
 .close {
@@ -734,12 +940,16 @@ a:hover {
     width: 90vw !important;
   }
 }
+.jc-start {
+  justify-content: flex-start;
+}
+
 .jc-center {
   justify-content: center;
 }
 
 .jc-end {
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .jc-space-between {
@@ -806,6 +1016,11 @@ a:hover {
   margin-left: 0.5rem;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-layout {
   display: flex;
   flex-wrap: wrap;
@@ -836,7 +1051,10 @@ a:hover {
   padding: var(--p-2);
   border-radius: 50%;
 }
-.avatar-sm-i-basic i {
+.avatar-sm-i-basic i,
+.avatar-sm-i-basic .icon,
+.avatar-sm-i-basic .grocery-card .icon-active,
+.grocery-card .avatar-sm-i-basic .icon-active {
   font-size: var(--fsz-2);
   vertical-align: middle;
 }
@@ -849,7 +1067,10 @@ a:hover {
   padding: var(--p-2);
   border-radius: 50%;
 }
-.avatar-sm-i-primary i {
+.avatar-sm-i-primary i,
+.avatar-sm-i-primary .icon,
+.avatar-sm-i-primary .grocery-card .icon-active,
+.grocery-card .avatar-sm-i-primary .icon-active {
   font-size: var(--fsz-2);
   vertical-align: middle;
 }
@@ -862,7 +1083,10 @@ a:hover {
   padding: var(--p-2);
   border-radius: 50%;
 }
-.avatar-sm-i-secondary i {
+.avatar-sm-i-secondary i,
+.avatar-sm-i-secondary .icon,
+.avatar-sm-i-secondary .grocery-card .icon-active,
+.grocery-card .avatar-sm-i-secondary .icon-active {
   font-size: var(--fsz-2);
   vertical-align: middle;
 }
@@ -875,7 +1099,10 @@ a:hover {
   padding: var(--p-2);
   border-radius: 50%;
 }
-.avatar-sm-i-abstract i {
+.avatar-sm-i-abstract i,
+.avatar-sm-i-abstract .icon,
+.avatar-sm-i-abstract .grocery-card .icon-active,
+.grocery-card .avatar-sm-i-abstract .icon-active {
   font-size: var(--fsz-2);
   vertical-align: middle;
 }
@@ -889,7 +1116,10 @@ a:hover {
   padding: var(--p-4);
   border-radius: 50%;
 }
-.avatar-lg-i-basic i {
+.avatar-lg-i-basic i,
+.avatar-lg-i-basic .icon,
+.avatar-lg-i-basic .grocery-card .icon-active,
+.grocery-card .avatar-lg-i-basic .icon-active {
   font-size: var(--fsz-3);
   vertical-align: middle;
 }
@@ -902,7 +1132,10 @@ a:hover {
   padding: var(--p-4);
   border-radius: 50%;
 }
-.avatar-lg-i-primary i {
+.avatar-lg-i-primary i,
+.avatar-lg-i-primary .icon,
+.avatar-lg-i-primary .grocery-card .icon-active,
+.grocery-card .avatar-lg-i-primary .icon-active {
   font-size: var(--fsz-3);
   vertical-align: middle;
 }
@@ -915,7 +1148,10 @@ a:hover {
   padding: var(--p-4);
   border-radius: 50%;
 }
-.avatar-lg-i-secondary i {
+.avatar-lg-i-secondary i,
+.avatar-lg-i-secondary .icon,
+.avatar-lg-i-secondary .grocery-card .icon-active,
+.grocery-card .avatar-lg-i-secondary .icon-active {
   font-size: var(--fsz-3);
   vertical-align: middle;
 }
@@ -928,7 +1164,10 @@ a:hover {
   padding: var(--p-4);
   border-radius: 50%;
 }
-.avatar-lg-i-abstract i {
+.avatar-lg-i-abstract i,
+.avatar-lg-i-abstract .icon,
+.avatar-lg-i-abstract .grocery-card .icon-active,
+.grocery-card .avatar-lg-i-abstract .icon-active {
   font-size: var(--fsz-3);
   vertical-align: middle;
 }
@@ -2393,6 +2632,47 @@ a:hover {
 
 .modal.dialog.show {
   transform: scale(1) !important;
+}
+
+.icon-input {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #adadb4;
+  border-radius: var(--br-1);
+  position: relative;
+}
+.icon-input .icon, .icon-input .grocery-card .icon-active, .grocery-card .icon-input .icon-active {
+  margin: auto var(--p-2);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.icon-input button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+.icon-input input {
+  font-family: "Inter";
+  padding: var(--p-3) 0;
+  flex-basis: 1;
+  border: 0;
+}
+.icon-input input:focus {
+  outline: 0;
+}
+.icon-input:focus-within {
+  background-color: #fff;
+  outline: 2px solid #2320cc;
+}
+.icon-input:focus-within .icon, .icon-input:focus-within .grocery-card .icon-active, .grocery-card .icon-input:focus-within .icon-active {
+  color: #2320cc;
+}
+.icon-input:hover {
+  background-color: #e5e5e5;
+}
+.icon-input:hover input {
+  background-color: #e5e5e5;
 }
 
 /*# sourceMappingURL=cssStack.css.map */

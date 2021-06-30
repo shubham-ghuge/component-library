@@ -37,10 +37,10 @@
       --c-#{$type}-#{$shade}: #{$value};
     }
   }
-  --c-black:hsl(240, 3%, 12%);
-  --c-link:hsl(210, 100%, 40%);
-  --c-grey-apple:hsl(240, 11%, 96%);
-  --c-grey:hsl(0, 0%, 95%);;
+  --c-black: hsl(240, 3%, 12%);
+  --c-link: hsl(210, 100%, 40%);
+  --c-grey-apple: hsl(240, 11%, 96%);
+  --c-grey: hsl(0, 0%, 95%);
 
   //   icon color custom prop
   @each $type, $shades in $icon-colors {
@@ -51,55 +51,83 @@
 }
 // text and bgc utils
 @each $fs, $val in $font-sizes {
-  .#{$fs}{
+  .#{$fs} {
     font-size: var(--#{$fs});
   }
 }
 
 @for $i from 0 through 7 {
-  .z-#{$i}{
+  .z-#{$i} {
     z-index: var(--z-#{$i});
   }
 }
 
+@for $i from 1 through 7 {
+  .fw-#{$i}00 {
+    font-weight: #{$i}00;
+  }
+}
+
 @for $i from 0 through 7 {
-  .p-#{$i}{
+  .p-#{$i} {
     padding: var(--p-#{$i});
   }
-  .pt-#{$i}{
+  .pt-#{$i} {
     padding-top: var(--p-#{$i});
   }
-  .pb-#{$i}{
+  .pb-#{$i} {
     padding-bottom: var(--p-#{$i});
   }
-  .py-#{$i}{
+  .py-#{$i} {
     padding-top: var(--p-#{$i});
   }
-  .px-#{$i}{
+  .pr-#{$i} {
+    padding-right: var(--p-#{$i});
+  }
+  .pl-#{$i} {
+    padding-left: var(--p-#{$i});
+  }
+  .px-#{$i} {
     padding: 0 var(--p-#{$i});
   }
 }
 
 @for $i from 0 through 7 {
-  .m-#{$i}{
+  .m-#{$i} {
     margin: var(--p-#{$i});
   }
-  .mt-#{$i}{
+  .mt-#{$i} {
     margin-top: var(--p-#{$i});
   }
-  .mb-#{$i}{
+  .ml-#{$i} {
+    margin-left: var(--p-#{$i});
+  }
+  .mr-#{$i} {
+    margin-right: var(--p-#{$i});
+  }
+  .mb-#{$i} {
     margin-bottom: var(--p-#{$i});
   }
-  .my-#{$i}{
-    margin: var(--p-#{$i}) 0;
+  .mx-#{$i} {
+    margin-left: var(--p-#{$i});
+    margin-right: var(--p-#{$i});
   }
-  .mx-#{$i}{
-    margin: 0 var(--p-#{$i});
+  .my-#{$i} {
+    margin-top: var(--p-#{$i});
+    margin-bottom: var(--p-#{$i});
   }
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 @for $i from 0 through 7 {
-  .bdrs-#{$i}{
+  .bdrs-#{$i} {
     border-radius: var(--br-#{$i});
   }
 }
@@ -107,12 +135,12 @@
 @each $type, $shades in $colors {
   @each $shade, $value in $shades {
     @if $shade==200 {
-      .c-#{$type}{
-        color:  var(--c-#{$type}-#{$shade})!important;
-      } 
+      .c-#{$type} {
+        color: var(--c-#{$type}-#{$shade}) !important;
+      }
     }
-    .bgc-#{$type}-#{$shade}{
-      background-color:  var(--c-#{$type}-#{$shade})!important;
+    .bgc-#{$type}-#{$shade} {
+      background-color: var(--c-#{$type}-#{$shade}) !important;
     }
   }
 }
