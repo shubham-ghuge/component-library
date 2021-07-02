@@ -2655,7 +2655,7 @@ a:hover {
 .icon-input input {
   font-family: "Inter";
   padding: var(--p-3) 0;
-  flex-basis: 1;
+  width: 80%;
   border: 0;
 }
 .icon-input input:focus {
@@ -2663,7 +2663,7 @@ a:hover {
 }
 .icon-input:focus-within {
   background-color: #fff;
-  outline: 2px solid #2320cc;
+  border: 2px solid #2320cc;
 }
 .icon-input:focus-within .icon, .icon-input:focus-within .grocery-card .icon-active, .grocery-card .icon-input:focus-within .icon-active {
   color: #2320cc;
@@ -2673,6 +2673,39 @@ a:hover {
 }
 .icon-input:hover input {
   background-color: #e5e5e5;
+}
+
+footer {
+  background-color: var(--c-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--p-7);
+  text-transform: capitalize;
+}
+footer .fsz-2 {
+  margin-bottom: var(--p-4);
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+footer ul > * {
+  margin: var(--p-2);
+}
+footer li a {
+  padding: var(--p-2);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 10px 10px 21px #d9d9d9, -10px -10px 21px #ffffff;
+  border: 2px solid var(--c-link);
+}
+footer .icon, footer .grocery-card .icon-active, .grocery-card footer .icon-active {
+  vertical-align: middle;
+  height: 1.2rem;
+  width: 1.2rem;
 }
 
 /*# sourceMappingURL=cssStack.css.map */

@@ -1144,7 +1144,7 @@
   input {
     font-family: "Inter";
     padding: var(--p-3) 0;
-    flex-basis: 1;
+    width: 80%;
     border: 0;
     &:focus {
       outline: 0;
@@ -1152,7 +1152,7 @@
   }
   &:focus-within {
     background-color: #fff;
-    outline: 2px solid #2320cc;
+    border: 2px solid #2320cc;
     .icon {
       color: #2320cc;
     }
@@ -1162,5 +1162,37 @@
     input {
       background-color: #e5e5e5;
     }
+  }
+}
+footer {
+  background-color: var(--c-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--p-7);
+  text-transform: capitalize;
+  .fsz-2{
+    margin-bottom: var(--p-4);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    & > * {
+      margin: var(--p-2);
+    }
+  }
+  li a {
+    padding: var(--p-2);
+    border-radius: 50%;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 10px 10px 21px #d9d9d9, -10px -10px 21px #ffffff;
+    border: 2px solid var(--c-link);
+  }
+  .icon {
+    vertical-align: middle;
+    height: 1.2rem;
+    width: 1.2rem;
   }
 }
