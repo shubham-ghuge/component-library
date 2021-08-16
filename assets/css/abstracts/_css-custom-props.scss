@@ -1,0 +1,152 @@
+@use './colors' as *;
+@use './variables' as *;
+
+:root {
+  // font custom props
+  @each $fs, $val in $font-sizes {
+    --#{$fs}: #{$val};
+  }
+  // output => --fsz-1 : 1.25rem;
+
+  //  creating custom props border sizes
+  /* z-index */
+  @function get-z-index($size) {
+    @return $ini-z-index * $size;
+  }
+  @for $i from 0 through 7 {
+    --z-#{$i}: #{get-z-index($i)};
+  }
+  /* border sizes */
+  @function get-br($size) {
+    @return $border-radius-size * $size;
+  }
+  @for $i from 0 through 7 {
+    --br-#{$i}: #{get-br($i)};
+  }
+  /* spacing size */
+  // creating space custom props
+  @function get-p($size) {
+    @return $spacer * $size;
+  }
+  @for $i from 0 through 7 {
+    --p-#{$i}: #{get-p($i)};
+  }
+  //   color custom props
+  @each $type, $shades in $colors {
+    @each $shade, $value in $shades {
+      --c-#{$type}-#{$shade}: #{$value};
+    }
+  }
+  --c-black: hsl(240, 3%, 12%);
+  --c-link: hsl(210, 100%, 40%);
+  --c-grey-apple: hsl(240, 11%, 96%);
+  --c-grey: hsl(0, 0%, 95%);
+
+  //   icon color custom prop
+  @each $type, $shades in $icon-colors {
+    @each $shade, $value in $shades {
+      --icon-#{$type}-#{$shade}: #{$value};
+    }
+  }
+}
+// text and bgc utils
+@each $fs, $val in $font-sizes {
+  .#{$fs} {
+    font-size: var(--#{$fs});
+  }
+}
+
+@for $i from 0 through 7 {
+  .z-#{$i} {
+    z-index: var(--z-#{$i});
+  }
+}
+
+@for $i from 1 through 7 {
+  .fw-#{$i}00 {
+    font-weight: #{$i}00;
+  }
+}
+
+@for $i from 0 through 7 {
+  .p-#{$i} {
+    padding: var(--p-#{$i});
+  }
+  .pt-#{$i} {
+    padding-top: var(--p-#{$i});
+  }
+  .pb-#{$i} {
+    padding-bottom: var(--p-#{$i});
+  }
+  .py-#{$i} {
+    padding-top: var(--p-#{$i});
+  }
+  .pr-#{$i} {
+    padding-right: var(--p-#{$i});
+  }
+  .pl-#{$i} {
+    padding-left: var(--p-#{$i});
+  }
+  .px-#{$i} {
+    padding: 0 var(--p-#{$i});
+  }
+}
+
+@for $i from 0 through 7 {
+  .m-#{$i} {
+    margin: var(--p-#{$i});
+  }
+  .mt-#{$i} {
+    margin-top: var(--p-#{$i});
+  }
+  .ml-#{$i} {
+    margin-left: var(--p-#{$i});
+  }
+  .mr-#{$i} {
+    margin-right: var(--p-#{$i});
+  }
+  .mb-#{$i} {
+    margin-bottom: var(--p-#{$i});
+  }
+  .mx-#{$i} {
+    margin-left: var(--p-#{$i});
+    margin-right: var(--p-#{$i});
+  }
+  .my-#{$i} {
+    margin-top: var(--p-#{$i});
+    margin-bottom: var(--p-#{$i});
+  }
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@for $i from 0 through 7 {
+  .bdrs-#{$i} {
+    border-radius: var(--br-#{$i});
+  }
+}
+
+@each $type, $shades in $colors {
+  @each $shade, $value in $shades {
+    @if $shade==200 {
+      .c-#{$type} {
+        color: var(--c-#{$type}-#{$shade}) !important;
+      }
+    }
+    .bgc-#{$type}-#{$shade} {
+      background-color: var(--c-#{$type}-#{$shade}) !important;
+    }
+  }
+}
+
+@mixin for-large-screen {
+  @media all and (min-width: 600px) {
+    @content;
+  }
+}

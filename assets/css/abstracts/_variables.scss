@@ -1,0 +1,16 @@
+// all variables related to the component library
+// ini => initial
+// initial z index size
+$ini-z-index: 10;
+// fixed initial value for spacing
+$spacer: 0.25rem;
+// initial border value
+$border-radius-size: 0.25rem;
+// font sizes
+$font-sizes: (
+  fsz-5: 3.052rem,
+  fsz-4: 2.441rem,
+  fsz-3: 1.953rem,
+  fsz-2: 1.563rem,
+  fsz-1: 1.25rem,
+);

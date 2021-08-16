@@ -1,0 +1,137 @@
+@use '../abstracts' as *;
+@use '../abstracts/colors' as *;
+.link {
+  color: var(--c-link);
+}
+.d-flex {
+  display: flex;
+}
+.d-ib {
+  display: inline-block;
+}
+.d-block {
+  display: block !important;
+}
+.d-none {
+  display: none !important;
+}
+@include for-large-screen {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+}
+.link-reset {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  .logo {
+    height: 60px;
+  }
+  span {
+    margin-left: var(--p-2);
+    font-size: var(--fsz-1);
+  }
+}
+.logo {
+  height: 80px;
+}
+.logo-img {
+  height: 60px;
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 0%;
+  top: 2%;
+}
+@for $i from 1 to 10 {
+  .h-#{$i}0 {
+    height: #{$i}0vh;
+  }
+}
+@for $i from 1 to 10 {
+  .w-#{$i}0 {
+    width: #{$i}0vw;
+  }
+  @include for-large-screen() {
+    .w-sm-#{$i}0 {
+      width: #{$i}0vw !important;
+    }
+  }
+}
+.jc-start {
+  justify-content: flex-start;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-end {
+  justify-content: flex-end;
+}
+.jc-space-between {
+  justify-content: space-between;
+}
+.jc-space-around {
+  justify-content: space-around;
+}
+.ai-center {
+  align-items: center;
+}
+.ai-flex-end {
+  align-items: flex-end;
+}
+.ai-flex-start {
+  align-items: flex-start;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+@each $color-type, $shades in $colors {
+  .text-#{$color-type} {
+    color: var(--c-#{$color-type}-200);
+  }
+}
+.muted {
+  color: var(--c-black);
+  font-weight: 600;
+}
+.strike {
+  text-decoration: line-through;
+  color: var(--c-base-200);
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--p-4);
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-adjust {
+  margin: 20px 0 0;
+  @include for-large-screen() {
+    margin: 70px 0 0;
+  }
+}
